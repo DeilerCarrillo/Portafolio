@@ -15,7 +15,17 @@
     <!-- NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#home">Deiler</a>
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center gap-2"
+          href="#home"
+          aria-label="Inicio"
+        >
+          <span class="brand-loader" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -54,15 +64,16 @@
           <span>Deiler David Carrillo Aguilar</span>
         </h1>
         <!-- Rol -->
-        <p class="lead mb-2">Desarrollador .NET Junior | Backend & Datos</p>
+        <p class="hero-role">Desarrollador .NET Junior | Backend & Datos</p>
         <!-- Resumen corto -->
-        <p class="text-muted mb-0">
+        <p class="hero-desc">
           Experiencia en ASP.NET Core, bases de datos SQL, ETL y Power BI.
         </p>
       </section>
       <!--Seccion sobre mi-->
       <section id="sobre-mi" class="container py-5">
-        <h2>Sobre mí</h2>
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="section-divider"></div>
         <p>
           Estudiante de Ingeniería en sistemas con enfoque en desarrollo web,
           redes y ciberseguridad.
@@ -70,7 +81,9 @@
       </section>
       <!-- Seccion habilidades -->
       <section id="habilidades" class="container py-5">
-        <h2 class="fw-bold mb-4">Habilidades técnicas</h2>
+        <h2 class="section-title">Habilidades técnicas</h2>
+        <div class="section-divider"></div>
+
         <div class="row g-4">
           <!-- BACKEND -->
           <div class="col-md-4">
@@ -114,19 +127,220 @@
 
       <!--Seccion proyectos-->
       <section id="proyectos" class="container py-5">
-        <h2>Proyectos</h2>
-        <p>Aquí mostrare algunos de mis proyectos</p>
+        <h2 class="section-title">Proyectos</h2>
+        <div class="section-divider"></div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Texto / descripción -->
+          <div class="col-lg-6">
+            <div class="project-card p-3 p-md-4 h-100">
+              <h5 class="fw-semibold mb-2">
+                Sistema de Gestión de Casos (Fibra Óptica)
+              </h5>
+              <p class="project-desc mb-3" id="projectSlideDesc">
+                Login seguro con roles (Admin / Técnico) y control de acceso.
+              </p>
+              <ul class="project-list mb-0">
+                <li>
+                  Gestión de casos por estado (abierto, en proceso, resuelto).
+                </li>
+                <li>Asignación a cuadrillas/técnicos.</li>
+                <li>Historial y evidencias (capturas/archivos).</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Carrusel -->
+          <div class="col-lg-6">
+            <div class="project-card p-2 p-md-3 h-100">
+              <div
+                id="casosFibraCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="3500"
+                data-bs-pause="hover"
+              >
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#casosFibraCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Login"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#casosFibraCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Dashboard"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#casosFibraCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Crear caso"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#casosFibraCarousel"
+                    data-bs-slide-to="3"
+                    aria-label="Reportes"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#casosFibraCarousel"
+                    data-bs-slide-to="4"
+                    aria-label="Vista técnico"
+                  ></button>
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner rounded-4 overflow-hidden">
+                  <div class="carousel-item active">
+                    <img
+                      src="img/proyecto/casos-1-login.png"
+                      class="d-block w-100 project-img"
+                      alt="Login del sistema"
+                    />
+                    <div class="carousel-caption custom-caption">
+                      <span class="caption-tag">Login del sistema</span>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="img/proyecto/casos-2-dashboard.png"
+                      class="d-block w-100 project-img"
+                      alt="Dashboard con todos los casos (Admin)"
+                    />
+                    <div class="carousel-caption custom-caption">
+                      <span class="caption-tag">Casos (Admin)</span>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="img/proyecto/casos-3-crear.png"
+                      class="d-block w-100 project-img"
+                      alt="Formulario para crear un caso"
+                    />
+                    <div class="carousel-caption custom-caption">
+                      <span class="caption-tag">Crear caso</span>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="img/proyecto/casos-4-reportes.png"
+                      class="d-block w-100 project-img"
+                      alt="Reportes para dueño o administrador"
+                    />
+                    <div class="carousel-caption custom-caption">
+                      <span class="caption-tag">Reportes</span>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="img/proyecto/casos-5-tecnico.png"
+                      class="d-block w-100 project-img"
+                      alt="Vista del técnico: solo casos asignados a su cuadrilla"
+                    />
+                    <div class="carousel-caption custom-caption">
+                      <span class="caption-tag">Vista técnico</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Controles -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#casosFibraCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#casosFibraCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+              </div>
+
+              <!-- Tools extra (Play/Pause + progress) -->
+              <div
+                class="carousel-tools d-flex align-items-center justify-content-between gap-2 px-2 py-2 mt-2"
+              >
+                <button
+                  id="carouselToggle"
+                  class="btn btn-sm btn-outline-light"
+                >
+                  Pausar
+                </button>
+                <div class="carousel-progress flex-grow-1">
+                  <div
+                    id="carouselProgressBar"
+                    class="carousel-progress-bar"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!--Seccion contacto-->
       <section id="contacto" class="container py-5">
-        <h2>Contacto</h2>
+        <h2 class="section-title">Contacto</h2>
+        <div class="section-divider"></div>
+
         <p>Email: deilerdavidcarrillo@hotmail.com</p>
       </section>
     </main>
+    <!-- Modal para ver imagen del carrusel -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content modal-dark">
+          <div class="modal-header modal-dark-header">
+            <h6 class="modal-title text-light" id="imgModalTitle">
+              Vista previa
+            </h6>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body p-0">
+            <img
+              id="imgModalSrc"
+              src=""
+              alt=""
+              style="width: 100%; height: auto; display: block"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--FOOTER-->
     <footer class="text-center py-3">
       <small>©2025 Deiler. Todos los derechos reservados.</small>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
