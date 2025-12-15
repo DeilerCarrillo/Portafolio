@@ -1,4 +1,7 @@
 (() => {
+  // =========================
+  // 1) Referencias al carrusel
+  // =========================
   const carouselEl = document.getElementById("casosFibraCarousel");
   if (!carouselEl) return;
 
@@ -8,6 +11,9 @@
   const toggleBtn = document.getElementById("carouselToggle");
   const bar = document.getElementById("carouselProgressBar");
 
+  // =========================
+  // 2) Inicializar carrusel Bootstrap
+  // =========================
   const carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
     ride: true,
     interval: intervalMs,
@@ -19,6 +25,9 @@
   let rafId = null;
   let startTs = null;
 
+  // =========================
+  // 3) Progress bar (sincronizada con interval)
+  // =========================
   function resetProgress() {
     if (bar) bar.style.width = "0%";
     startTs = null;
@@ -47,6 +56,9 @@
     if (!isPaused) startProgress();
   });
 
+  // =========================
+  // 4) Botón Pausar/Reanudar
+  // =========================
   if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
       isPaused = !isPaused;
@@ -63,10 +75,37 @@
     });
   }
 
-  // Modal al hacer click en imagen
+  // =========================
+  // 5) Caption dinámica
+  // =========================
+  function ensureCaption() {
+    let cap = carouselEl.querySelector(".custom-caption");
+    if (!cap) {
+      cap = document.createElement("div");
+      cap.className = "carousel-caption custom-caption";
+      cap.innerHTML = `<span class="caption-tag"></span>`;
+      carouselEl.querySelector(".carousel-inner")?.appendChild(cap);
+    }
+    return cap.querySelector(".caption-tag");
+  }
+
+  const captionTag = ensureCaption();
+
+  function updateCaption() {
+    const activeImg = carouselEl.querySelector(".carousel-item.active img");
+    if (captionTag && activeImg) captionTag.textContent = activeImg.alt || "";
+  }
+
+  updateCaption();
+  carouselEl.addEventListener("slid.bs.carousel", updateCaption);
+
+  // =========================
+  // Modal click en imagen abre vista previa
+  // =========================
   const modalEl = document.getElementById("imgModal");
   const modalImg = document.getElementById("imgModalSrc");
   const modalTitle = document.getElementById("imgModalTitle");
+  const modalCaption = document.getElementById("imgModalCaption");
 
   if (modalEl && modalImg && modalTitle) {
     const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
@@ -75,31 +114,16 @@
       img.addEventListener("click", () => {
         modalImg.src = img.src;
         modalImg.alt = img.alt || "Imagen del proyecto";
-        modalTitle.textContent = img.alt || "Vista previa";
+
+        modalTitle.textContent =
+          "Sistema de Gestión de Casos y Citas (Fibra Óptica)";
+
+        if (modalCaption) {
+          modalCaption.textContent = img.alt || "";
+        }
+
         modal.show();
       });
     });
   }
-})();
-
-(() => {
-  const carouselEl = document.getElementById("casosFibraCarousel");
-  const descEl = document.getElementById("projectSlideDesc");
-  if (!carouselEl || !descEl) return;
-
-  const descriptions = [
-    "Login seguro con roles (Admin / Técnico) y control de acceso.",
-    "Panel de administración: listado completo de casos y estados.",
-    "Creación de casos: datos del cliente, ubicación, prioridad y notas.",
-    "Reportes para dueño/admin: métricas, cierres, tiempos y productividad.",
-    "Vista técnico: solo casos asignados a su cuadrilla (agenda/pendientes).",
-  ];
-
-  // Al iniciar, setear el texto correcto
-  descEl.textContent = descriptions[0];
-
-  carouselEl.addEventListener("slid.bs.carousel", (e) => {
-    const idx = e.to;
-    descEl.textContent = descriptions[idx] || descriptions[0];
-  });
 })();

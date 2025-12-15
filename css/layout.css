@@ -1,0 +1,111 @@
+/* =========================
+   SECCIONES
+========================= */
+section {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 16px;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    600px circle at 30% 20%,
+    rgba(193, 18, 31, 0.18),
+    rgba(0, 123, 255, 0.1),
+    transparent 60%
+  );
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* =========================
+     TITULOS DE SECCION
+  ========================= */
+.section-title {
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.75rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.18);
+  margin-bottom: 1.8rem;
+}
+
+/* =========================
+     NAVBAR
+  ========================= */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar-brand {
+  color: var(--accent-red) !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+}
+
+.nav-link:hover {
+  color: var(--accent-red-hover) !important;
+}
+
+/* =========================
+     FOOTER
+  ========================= */
+footer {
+  background-color: var(--bg-main);
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+footer * {
+  background: transparent !important;
+}
+
+footer a {
+  color: var(--text-muted) !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent-red-hover) !important;
+}
+
+/* =========================
+     RESPONSIVE
+  ========================= */
+@media (max-width: 768px) {
+  section {
+    padding: 1.5rem;
+  }
+}

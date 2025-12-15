@@ -1,0 +1,107 @@
+/* =========================
+   PROYECTOS - CARD & CARRUSEL
+========================= */
+
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.project-impact {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  border-left: 3px solid rgba(193, 18, 31, 0.6);
+  padding-left: 0.75rem;
+}
+
+.project-img {
+  height: 360px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .project-img {
+    height: 240px;
+  }
+}
+
+/* progress bar */
+.carousel-progress {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    rgba(193, 18, 31, 0.9),
+    rgba(225, 29, 46, 0.6)
+  );
+  border-radius: 999px;
+}
+
+/* Caption como etiqueta arriba-izquierda */
+.carousel .custom-caption {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: auto;
+  bottom: auto;
+  padding: 0;
+  text-align: left;
+  z-index: 5;
+}
+
+/* Etiqueta */
+.carousel .caption-tag {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.68);
+  color: #f5f5f5;
+  padding: 0.4rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+}
+
+/* Móvil más compacto */
+@media (max-width: 768px) {
+  .carousel .custom-caption {
+    top: 10px;
+    left: 10px;
+  }
+  .carousel .caption-tag {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+.modal-dark-header small {
+  display: block;
+  margin-top: 0.15rem;
+  color: rgba(255, 255, 255, 0.65) !important;
+}

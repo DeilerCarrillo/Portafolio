@@ -9,6 +9,10 @@
       content="Portafolio de Deiler Carrillo, desarrollador .NET Junior con experiencia en ASP.NET Core, SQL Server, ETL y Power BI."
     />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -64,19 +68,67 @@
           <span>Deiler David Carrillo Aguilar</span>
         </h1>
         <!-- Rol -->
-        <p class="hero-role">Desarrollador .NET Junior | Backend & Datos</p>
-        <!-- Resumen corto -->
-        <p class="hero-desc">
-          Experiencia en ASP.NET Core, bases de datos SQL, ETL y Power BI.
-        </p>
+        <p class="hero-role mb-2">Desarrollador Backend .NET (Junior)</p>
+
+        <!-- Stack -->
+        <p class="hero-desc mb-4">ASP.NET Core · EF Core · SQL Server</p>
+
+        <!-- Botones principales -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+          <a href="#proyectos" class="btn btn-primary btn-sm px-4">
+            Ver proyectos
+          </a>
+          <a
+            href="assets/CV-Deiler-Carrillo.pdf"
+            class="btn btn-outline-light btn-sm px-4"
+            target="_blank"
+            rel="noopener"
+          >
+            Descargar CV
+          </a>
+        </div>
+
+        <!-- Iconos sociales -->
+        <div class="d-flex justify-content-center gap-3">
+          <a
+            href="https://www.linkedin.com/in/deiler-david-carrillo-aguilar-51a59b28b/"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a
+            href="https://github.com/DeilerCarrillo"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+
+          <a
+            href="mailto:deilerdavidcarrillo@hotmail.com"
+            class="social-icon"
+            aria-label="Email"
+          >
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
       </section>
       <!--Seccion sobre mi-->
       <section id="sobre-mi" class="container py-5">
         <h2 class="section-title">Sobre mí</h2>
         <div class="section-divider"></div>
         <p>
-          Estudiante de Ingeniería en sistemas con enfoque en desarrollo web,
-          redes y ciberseguridad.
+          Desarrollador Backend .NET en formación, enfocado en la creación de
+          aplicaciones web seguras y escalables. Experiencia desarrollando
+          soluciones con ASP.NET Core, Entity Framework Core y SQL Server,
+          aplicando control de acceso por roles y buenas prácticas de
+          arquitectura.
         </p>
       </section>
       <!-- Seccion habilidades -->
@@ -134,21 +186,49 @@
           <!-- Texto / descripción -->
           <div class="col-lg-6">
             <div class="project-card p-3 p-md-4 h-100">
-              <h5 class="fw-semibold mb-2">
-                Sistema de Gestión de Casos (Fibra Óptica)
+              <!-- Título -->
+              <h5 class="fw-semibold mb-1">
+                Sistema de Gestión de Casos y Citas (Fibra Óptica)
               </h5>
-              <p class="project-desc mb-3" id="projectSlideDesc">
-                Login seguro con roles (Admin / Técnico) y control de acceso.
+
+              <!-- Stack / enfoque -->
+              <p class="project-meta mb-2">
+                ASP.NET Core · EF Core · SQL Server · Identity · Roles
               </p>
-              <ul class="project-list mb-0">
+
+              <!-- Problema + solución -->
+              <p class="project-desc mb-3">
+                La empresa gestionaba las citas y casos de clientes mediante
+                Google Calendar, lo que provocaba falta de control, duplicidad
+                de agendas y dificultad para dar seguimiento a los trabajos
+                realizados. El sistema centraliza la gestión de casos y citas,
+                permitiendo asignarlos por planilla o cuadrilla y controlar el
+                acceso según el rol del usuario.
+              </p>
+
+              <!-- Funcionalidades clave -->
+              <ul class="project-list mb-3">
+                <li>Gestión centralizada de casos y citas de clientes.</li>
                 <li>
-                  Gestión de casos por estado (abierto, en proceso, resuelto).
+                  Asignación de trabajos a técnicos o planillas específicas.
                 </li>
-                <li>Asignación a cuadrillas/técnicos.</li>
-                <li>Historial y evidencias (capturas/archivos).</li>
+                <li>Control de acceso por roles (Administrador / Técnico).</li>
+                <li>Historial de casos con evidencias y estados.</li>
+                <li>
+                  Reportes administrativos para medir la efectividad de las
+                  planillas.
+                </li>
               </ul>
+
+              <!-- Impacto -->
+              <p class="project-impact mb-0">
+                Resultado: mayor control operativo, reducción de errores en la
+                agenda y mejor toma de decisiones mediante reportes
+                administrativos.
+              </p>
             </div>
           </div>
+
           <!-- Carrusel -->
           <div class="col-lg-6">
             <div class="project-card p-2 p-md-3 h-100">
@@ -201,57 +281,53 @@
                     <img
                       src="img/Proyecto/casos-1-login.png"
                       class="d-block w-100 project-img"
-                      alt="Login del sistema"
+                      alt="Acceso seguro por roles"
+                      loading="lazy"
+                      decoding="async"
                     />
-                    <div class="carousel-caption custom-caption">
-                      <span class="caption-tag">Login del sistema</span>
-                    </div>
                   </div>
 
                   <div class="carousel-item">
                     <img
                       src="img/Proyecto/casos-2-dashboard.png"
                       class="d-block w-100 project-img"
-                      alt="Dashboard con todos los casos (Admin)"
+                      alt="Control general de casos"
+                      loading="lazy"
+                      decoding="async"
                     />
-                    <div class="carousel-caption custom-caption">
-                      <span class="caption-tag">Casos (Admin)</span>
-                    </div>
                   </div>
 
                   <div class="carousel-item">
                     <img
                       src="img/Proyecto/casos-3-crear.png"
                       class="d-block w-100 project-img"
-                      alt="Formulario para crear un caso"
+                      alt="Registro estructurado de casos"
+                      loading="lazy"
+                      decoding="async"
                     />
-                    <div class="carousel-caption custom-caption">
-                      <span class="caption-tag">Crear caso</span>
-                    </div>
                   </div>
 
                   <div class="carousel-item">
                     <img
                       src="img/Proyecto/casos-4-reportes.png"
                       class="d-block w-100 project-img"
-                      alt="Reportes para dueño o administrador"
+                      alt="Reportes para toma de decisiones"
+                      loading="lazy"
+                      decoding="async"
                     />
-                    <div class="carousel-caption custom-caption">
-                      <span class="caption-tag">Reportes</span>
-                    </div>
                   </div>
 
                   <div class="carousel-item">
                     <img
                       src="img/Proyecto/casos-5-tecnico.png"
                       class="d-block w-100 project-img"
-                      alt="Vista del técnico: solo casos asignados a su cuadrilla"
+                      alt="Casos asignados al técnico"
+                      loading="lazy"
+                      decoding="async"
                     />
-                    <div class="carousel-caption custom-caption">
-                      <span class="caption-tag">Vista técnico</span>
-                    </div>
                   </div>
                 </div>
+
                 <!-- Controles -->
                 <button
                   class="carousel-control-prev"
@@ -314,9 +390,13 @@
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content modal-dark">
           <div class="modal-header modal-dark-header">
-            <h6 class="modal-title text-light" id="imgModalTitle">
-              Vista previa
-            </h6>
+            <div>
+              <h6 class="modal-title text-light mb-0" id="imgModalTitle">
+                Vista previa
+              </h6>
+              <small class="text-secondary" id="imgModalCaption"></small>
+            </div>
+
             <button
               type="button"
               class="btn-close btn-close-white"
@@ -324,6 +404,7 @@
               aria-label="Cerrar"
             ></button>
           </div>
+
           <div class="modal-body p-0">
             <img
               id="imgModalSrc"
@@ -341,6 +422,7 @@
       <small>©2025 Deiler. Todos los derechos reservados.</small>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/carousel-controls.js"></script>
+    <script src="js/carousel-desc.js"></script>
   </body>
 </html>
