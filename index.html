@@ -8,12 +8,35 @@
       name="description"
       content="Portafolio de Deiler Carrillo, desarrollador .NET Junior con experiencia en ASP.NET Core, SQL Server, ETL y Power BI."
     />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap base -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+<!-- Bootstrap Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+/>
+
+<!-- ===== Estilos propios ===== -->
+
+<!-- Base (variables, colores, tipografía) -->
+<link rel="stylesheet" href="css/base.css" />
+
+<!-- Layout (body, sections, estructura general) -->
+<link rel="stylesheet" href="css/layout.css" />
+
+<!-- Loader (Sharingan / Mangekyō) -->
+<link rel="stylesheet" href="css/loader.css" />
+
+<!-- Componentes (cards, badges, botones, iconos sociales) -->
+<link rel="stylesheet" href="css/components.css" />
+
+<!-- Proyectos -->
+<link rel="stylesheet" href="css/projects.css" />
+
+<!-- Utilidades y overrides -->
+<link rel="stylesheet" href="css/utilities.css" />
+
   </head>
   <body>
     <!-- NAVBAR-->
@@ -24,12 +47,51 @@
           href="#home"
           aria-label="Inicio"
         >
-          <span class="brand-loader" aria-hidden="true">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        <span class="brand-eye" aria-hidden="true">
+          <!-- Sharingan Tomoe (estado inicial / top) -->
+          <span class="eye eye--tomoe is-active">
+            <span class="sharingan">
+              <img
+                src="img/loader/sharingan-base.png"
+                class="sharingan-layer base"
+                alt=""
+                decoding="async"
+              />
+              <img
+                src="img/loader/tomoe-tomoe.png"
+                class="sharingan-layer tomoe"
+                alt=""
+                decoding="async"
+              />
+              <img
+                src="img/loader/tomoe-center.png"
+                class="sharingan-layer center"
+                alt=""
+                decoding="async"
+              />
+            </span>
           </span>
-        </a>
+        
+          <!-- Mangekyō (cuando hace scroll) -->
+          <span class="eye eye--mangekyou">
+            <span class="sharingan">
+              <img
+                src="img/loader/mangekyou.png"
+                class="sharingan-layer mangekyou"
+                alt=""
+                decoding="async"
+              />
+              <img
+                src="img/loader/mangekyou-center.png"
+                class="sharingan-layer center"
+                alt=""
+                decoding="async"
+              />
+            </span>
+          </span>
+        </span>
+        
+        
         <button
           class="navbar-toggler"
           type="button"
@@ -422,6 +484,7 @@
       <small>©2025 Deiler. Todos los derechos reservados.</small>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar-sharingan.js"></script>
     <script src="js/carousel-controls.js"></script>
     <script src="js/carousel-desc.js"></script>
   </body>

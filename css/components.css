@@ -41,6 +41,82 @@
   background: rgba(255, 255, 255, 0.8);
 }
 
+/* Contenedor del “ojo” */
+.brand-eye {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 18px rgba(193, 18, 31, 0.18);
+  overflow: hidden;
+}
+
+/* Las 2 variantes ocupan el mismo espacio */
+.brand-eye .eye {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.eye-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Por defecto: Tomoe visible, Mangekyou oculto */
+.eye--tomoe {
+  display: grid;
+}
+.eye--mangekyou {
+  display: none;
+}
+
+/* Cuando el navbar tenga .scrolled → cambiar a Mangekyou */
+.navbar.scrolled .eye--tomoe {
+  display: none;
+}
+.navbar.scrolled .eye--mangekyou {
+  display: grid;
+}
+
+/* Animaciones: rotación + pulso suave (siempre activas) */
+.eye--tomoe .eye-svg {
+  animation: eyeSpin 1.8s linear infinite, eyePulse 1.6s ease-in-out infinite;
+}
+.eye--mangekyou .eye-svg {
+  animation: eyeSpin 1.2s linear infinite, eyePulse 1.6s ease-in-out infinite;
+}
+
+@keyframes eyeSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes eyePulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(193, 18, 31, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(193, 18, 31, 0.55));
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .eye--tomoe .eye-svg,
+  .eye--mangekyou .eye-svg {
+    animation: none;
+  }
+}
+
 @keyframes orbit {
   0% {
     transform: translate(-50%, -50%) rotate(0deg) translateX(10px);

@@ -1,0 +1,136 @@
+/* ================================
+   SHARINGAN / MANGEKYOU LOADER
+   (Navbar brand icon)
+================================ */
+
+/* Tamaño del ícono (ajustable) */
+.brand-eye {
+  --eye-size: 52px; /* <- subilo si lo ves pequeño */
+  --spin-speed: 2.4s;
+  --spin-speed-m: 3.2s;
+  --pulse-speed: 1.25s;
+
+  position: relative;
+  width: var(--eye-size);
+  height: var(--eye-size);
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+/* Desktop: más grande */
+@media (min-width: 992px) {
+  .brand-eye {
+    --eye-size: 58px; /* <- más grande en PC */
+  }
+}
+
+/* Alineación dentro del navbar-brand */
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Cada “estado” (tomoe / mangekyou) */
+.eye {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.eye.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Contenedor relativo para capas */
+.sharingan {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Capas */
+.sharingan-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  /* suaviza animaciones */
+  will-change: transform;
+  transform-origin: 50% 50%;
+
+  /* “anime glow” suave */
+  filter: drop-shadow(0 0 6px rgba(193, 18, 31, 0.35));
+}
+
+/* --------------------------
+     TOMOE: rotación + pulso
+  --------------------------- */
+@keyframes rotate-tomoe {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sharingan-layer.tomoe {
+  animation: rotate-tomoe var(--spin-speed) linear infinite;
+}
+
+/* Centro: pulso */
+@keyframes pulse-center {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.85;
+  }
+}
+
+.sharingan-layer.center {
+  animation: pulse-center var(--pulse-speed) ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.35));
+}
+
+/* Base (sin animación) */
+.sharingan-layer.base {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.45));
+}
+
+/* --------------------------
+     MANGEKYOU: animación propia
+     (rotación más lenta + “latido”)
+  --------------------------- */
+@keyframes rotate-mangekyou {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.sharingan-layer.mangekyou {
+  animation: rotate-mangekyou var(--spin-speed-m) linear infinite;
+}
+
+/* Hover SOLO en desktop (extra pro) */
+@media (hover: hover) and (pointer: fine) {
+  .navbar-brand:hover .brand-eye {
+    filter: drop-shadow(0 0 10px rgba(225, 29, 46, 0.45));
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .sharingan-layer.tomoe,
+  .sharingan-layer.mangekyou,
+  .sharingan-layer.center {
+    animation: none !important;
+  }
+}

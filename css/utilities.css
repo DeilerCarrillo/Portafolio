@@ -32,3 +32,29 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.22);
 }
+
+/* ===== FORCE SIZE: brand loader ===== */
+.navbar .navbar-brand {
+  line-height: 1 !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.navbar .navbar-brand .brand-eye {
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;
+  min-height: 64px !important;
+  display: inline-block !important;
+}
+
+.navbar .navbar-brand .sharingan,
+.navbar .navbar-brand .sharingan-layer {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Si tu navbar está muy “bajita”, súbela */
+.navbar {
+  min-height: 78px;
+}

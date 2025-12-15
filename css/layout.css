@@ -71,6 +71,12 @@ section::before {
   font-weight: 700;
 }
 
+.navbar .navbar-brand {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  line-height: 1;
+}
+
 .nav-link {
   color: var(--text-main) !important;
 }
