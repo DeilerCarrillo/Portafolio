@@ -1,21 +1,26 @@
 (() => {
   const nav = document.querySelector(".navbar");
-  const eyeTomoe = document.querySelector(".eye--tomoe");
-  const eyeMangekyou = document.querySelector(".eye--mangekyou");
+  if (!nav) return;
 
-  if (!nav || !eyeTomoe || !eyeMangekyou) return;
+  const brandEye = nav.querySelector(".brand-eye");
+  const eyeTomoe = nav.querySelector(".eye--tomoe");
+  const eyeMangekyou = nav.querySelector(".eye--mangekyou");
 
   function setEye(isScrolled) {
-    // navbar scrolled
-    nav.classList.toggle("scrolled", isScrolled);
+    if (!eyeTomoe || !eyeMangekyou) return;
 
-    // swap eyes
     eyeTomoe.classList.toggle("is-active", !isScrolled);
     eyeMangekyou.classList.toggle("is-active", isScrolled);
   }
 
   function onScroll() {
-    setEye(window.scrollY > 40);
+    const scrolled = window.scrollY > 40;
+
+    // Tu efecto existente del navbar
+    nav.classList.toggle("scrolled", scrolled);
+
+    // Cambia Tomoe <-> Mangekyou
+    setEye(scrolled);
   }
 
   onScroll();
