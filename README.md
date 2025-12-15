@@ -34,10 +34,9 @@ Se desarrolló un sistema web que centraliza la gestión de casos y citas, con c
 
 ## Cómo ver el portafolio
 
-- GitHub Pages: (poné aquí el link cuando lo tengás publicado)
+- GitHub Pages: (https://deilercarrillo.github.io/Portafolio/)
 
 ## Contacto
 
 - Email: deilerdavidcarrillo@hotmail.com
-- GitHub: https://github.com/DeilerCarrillo
 - LinkedIn: (https://www.linkedin.com/in/deiler-david-carrillo-aguilar-51a59b28b/)
