@@ -1,18 +1,21 @@
 /* ================================
    SHARINGAN / MANGEKYOU (NAV ICON)
-   loader.css
+   loader.css (limpio + pro)
 ================================ */
 
-/* Tamaño base (si lo forzás en utilities con !important, esto queda como default) */
+/* Tamaño base (si lo forzás en utilities con !important, esto es default) */
 .brand-eye {
   position: relative;
   width: 56px;
   height: 56px;
   display: inline-block;
   line-height: 1;
+
+  /* performance */
+  contain: layout paint;
 }
 
-/* Ajuste opcional por breakpoints (puedes borrar si ya forzás con utilities) */
+/* Ajustes por breakpoint (opcional) */
 @media (min-width: 992px) {
   .brand-eye {
     width: 64px;
@@ -48,6 +51,7 @@
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
+  contain: paint;
 }
 
 /* Capas PNG */
@@ -69,7 +73,7 @@
   transform: translateZ(0);
 }
 
-/* Glow sutil (anime) */
+/* Glow sutil solo en base del tomoe */
 .eye.is-active .sharingan-layer.base {
   filter: drop-shadow(0 0 8px rgba(193, 18, 31, 0.2));
 }
@@ -109,17 +113,20 @@
    (Fondo rojo por CSS + símbolo rotando)
 ========================= */
 
-/* Fondo rojo PERFECTO para Mangekyō (no depende del PNG base) */
+/* Fondo rojo “brutal” para dark mode */
 .sharingan--mangekyou {
   border-radius: 50%;
   overflow: hidden;
+
   background: radial-gradient(
     circle at 35% 35%,
-    #ff4b57 0%,
-    #b10f1b 55%,
-    #7d0a12 100%
+    #ff5a66 0%,
+    #c1121f 52%,
+    #7a0b12 100%
   );
-  box-shadow: 0 0 10px rgba(193, 18, 31, 0.28);
+
+  /* glow controlado (en contenedor, NO en el layer rotando) */
+  box-shadow: 0 0 12px rgba(193, 18, 31, 0.25), 0 0 28px rgba(193, 18, 31, 0.12);
 }
 
 /* Rotación del símbolo */
@@ -133,11 +140,13 @@
 }
 .sharingan-layer.mangekyou {
   animation: rotate-mangekyou 2.2s linear infinite;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.55));
+
+  /* si querés 0 vibración, dejalo en none (recomendado) */
+  filter: none;
   opacity: 0.98;
 }
 
-/* Centro del Mangekyō (rojo) con pulso distinto */
+/* Centro del Mangekyō */
 @keyframes pulse-mangekyou-center {
   0%,
   100% {
@@ -154,6 +163,112 @@
 }
 
 /* =========================
+   SWITCH TOMOE <-> MANGEKYOU
+   (solo por .navbar.scrolled)
+========================= */
+.navbar:not(.scrolled) .eye--tomoe {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.navbar:not(.scrolled) .eye--mangekyou {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.navbar.scrolled .eye--tomoe {
+  opacity: 0;
+  transform: scale(0.92);
+  pointer-events: none;
+}
+
+.navbar.scrolled .eye--mangekyou {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =========================
+   TRANSICIÓN PRO: flash + shake
+   (desktop)
+========================= */
+@keyframes awaken-flash {
+  0% {
+    box-shadow: 0 0 0 rgba(193, 18, 31, 0);
+  }
+  35% {
+    box-shadow: 0 0 18px rgba(193, 18, 31, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(193, 18, 31, 0.2);
+  }
+}
+
+@keyframes awaken-shake {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  15% {
+    transform: scale(1.03) rotate(-1.2deg);
+  }
+  30% {
+    transform: scale(1.03) rotate(1.2deg);
+  }
+  45% {
+    transform: scale(1.02) rotate(-0.6deg);
+  }
+  60% {
+    transform: scale(1.01) rotate(0.6deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Solo cuando está scrolled */
+.navbar.scrolled .sharingan--mangekyou {
+  animation: awaken-flash 0.55s ease-out 1;
+}
+
+.navbar.scrolled .eye--mangekyou {
+  animation: awaken-shake 0.32s ease-out 1;
+}
+
+/* ==================================
+   MÓVIL: animación más simple
+================================== */
+@media (max-width: 576px) {
+  .brand-eye {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* quitar flash/shake en móvil */
+  .navbar.scrolled .sharingan--mangekyou {
+    animation: none !important;
+  }
+  .navbar.scrolled .eye--mangekyou {
+    animation: none !important;
+  }
+
+  /* rotaciones más suaves */
+  .sharingan-layer.tomoe {
+    animation-duration: 3.6s;
+  }
+  .sharingan-layer.mangekyou {
+    animation-duration: 3s;
+  }
+
+  /* pulso menos agresivo */
+  .sharingan-layer.center {
+    animation-duration: 1.8s;
+  }
+  .sharingan-layer.mangekyou-center {
+    animation-duration: 1.6s;
+  }
+}
+
+/* =========================
    Accesibilidad
 ========================= */
 @media (prefers-reduced-motion: reduce) {
@@ -163,28 +278,9 @@
   .sharingan-layer.mangekyou-center {
     animation: none !important;
   }
-}
 
-/* Cambiar de Tomoe -> Mangekyō cuando la navbar tenga .scrolled */
-.navbar.scrolled .eye--tomoe {
-  opacity: 0;
-  transform: scale(0.98);
-  pointer-events: none;
-}
-
-.navbar.scrolled .eye--mangekyou {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Estado normal (top): Tomoe visible, Mangekyō oculto */
-.navbar:not(.scrolled) .eye--tomoe {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.navbar:not(.scrolled) .eye--mangekyou {
-  opacity: 0;
-  transform: scale(0.98);
-  pointer-events: none;
+  .navbar.scrolled .sharingan--mangekyou,
+  .navbar.scrolled .eye--mangekyou {
+    animation: none !important;
+  }
 }
