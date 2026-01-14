@@ -180,3 +180,61 @@
     box-shadow: 0 4px 12px rgba(193, 18, 31, 0.15);
   }
 }
+
+/* =========================
+     IMAGE MODAL NAV (Gallery)
+  ========================= */
+.img-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(20, 20, 20, 0.55);
+  color: rgba(255, 255, 255, 0.92);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  z-index: 2;
+}
+
+.img-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.img-nav--prev {
+  left: 14px;
+}
+.img-nav--next {
+  right: 14px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .img-nav:hover {
+    transform: translateY(-50%) scale(1.06);
+    background: rgba(20, 20, 20, 0.75);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+}
+
+.img-counter {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(20, 20, 20, 0.55);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}

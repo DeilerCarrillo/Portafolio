@@ -1,0 +1,173 @@
+/* =========================
+   SKILLS MATRIX (Certificados)
+========================= */
+
+.skills-matrix-wrap {
+  border-radius: 18px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+  position: relative;
+    isolation: isolate;
+overflow: hidden;
+}
+
+.skills-matrix-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -120px -120px auto -120px;
+  height: 180px;
+  background: radial-gradient(circle at 35% 40%, rgba(193, 18, 31, 0.16), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(14px);
+}
+
+.skills-matrix-sub {
+  margin: 0 0 18px 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-matrix-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1100px) {
+  .skills-matrix-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .skills-matrix-grid { grid-template-columns: 1fr; }
+}
+
+.sm-card {
+  border-radius: 16px;
+  background: rgba(0,0,0,0.26);
+  border: 1px solid rgba(255,255,255,0.10);
+  overflow: hidden;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.sm-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.30);
+}
+
+.sm-card__head {
+  padding: 14px 14px 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sm-card__head i {
+  font-size: 1.1rem;
+}
+
+.sm-card__body {
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.sm-skill {
+  border-radius: 12px;
+  padding: 10px 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.sm-skill__name {
+  font-weight: 800;
+  margin: 0 0 8px 0;
+}
+
+.sm-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sm-chip {
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.22);
+  color: var(--text-main);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: .85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .14s ease, border-color .14s ease, background .14s ease;
+  user-select: none;
+}
+
+.sm-chip:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.sm-chip__badge {
+  font-size: .72rem;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.07);
+}
+
+/* Variantes */
+.sm-chip--udemy .sm-chip__badge {
+  background: rgba(147, 51, 234, 0.22);
+  border-color: rgba(147, 51, 234, 0.35);
+}
+.sm-chip--cisco .sm-chip__badge {
+  background: rgba(34, 197, 94, 0.20);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+.sm-chip--practice .sm-chip__badge {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+.sm-chip--evidence .sm-chip__badge {
+  background: rgba(245, 158, 11, 0.20);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.skills-matrix-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Details (lista completa) */
+.skills-extra summary {
+  cursor: pointer;
+  user-select: none;
+  color: var(--text-main);
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.skills-extra[open] summary {
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.05);
+}

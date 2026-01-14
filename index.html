@@ -29,6 +29,8 @@
     <link href="css/projects.css" rel="stylesheet" />
     <!-- Certificados -->
     <link href="css/certificates.css" rel="stylesheet" />
+    <!-- Skills Matrix -->
+    <link href="css/skills-matrix.css" rel="stylesheet" />
     <!-- Utilidades y overrides -->
     <link href="css/utilities.css" rel="stylesheet" />
   </head>
@@ -177,7 +179,6 @@
       <section class="container py-5" id="sobre-mi">
         <h2 class="section-title">Sobre mí</h2>
         <div class="section-divider"></div>
-
         <p class="mb-0">
           Construyo aplicaciones web con <strong>ASP.NET Core</strong> +
           <strong>SQL Server</strong>, integrando <strong>APIs</strong>,
@@ -190,205 +191,79 @@
       </section>
       <!-- Seccion habilidades -->
       <section class="container py-5" id="habilidades">
-        <h2 class="section-title">Habilidades técnicas</h2>
+        <h2 class="section-title">
+          <i class="bi bi-patch-check"></i> Habilidades respaldadas por
+          certificados
+        </h2>
         <div class="section-divider"></div>
-        <div class="row g-4">
-          <!-- BACKEND -->
-          <div class="col-md-6 col-lg-3">
-            <h5 class="fw-semibold mb-3">Backend &amp; APIs</h5>
-            <span class="badge bg-danger me-1 mb-2">C#</span>
-            <span class="badge bg-danger me-1 mb-2">ASP.NET Core</span>
-            <span class="badge bg-danger me-1 mb-2">Web API (.NET 9)</span>
-            <span class="badge bg-danger me-1 mb-2">Entity Framework Core</span>
-            <span class="badge bg-danger me-1 mb-2">.NET MVC</span>
-            <span class="badge bg-danger me-1 mb-2">Identity / Roles</span>
-            <span class="badge bg-danger me-1 mb-2">SOLID</span>
-            <span class="badge bg-danger me-1 mb-2">Clean Code</span>
-          </div>
-          <!-- FRONTEND -->
-          <div class="col-md-6 col-lg-3">
-            <h5 class="fw-semibold mb-3">Frontend</h5>
-            <span class="badge bg-danger me-1 mb-2">React</span>
-            <span class="badge bg-danger me-1 mb-2">JavaScript</span>
-            <span class="badge bg-danger me-1 mb-2">HTML5</span>
-            <span class="badge bg-danger me-1 mb-2">CSS3</span>
-            <span class="badge bg-danger me-1 mb-2">Bootstrap 5</span>
-            <span class="badge bg-danger me-1 mb-2">Responsive UI</span>
-          </div>
-          <!-- BASES DE DATOS -->
-          <div class="col-md-6 col-lg-3">
-            <h5 class="fw-semibold mb-3">Bases de datos</h5>
-            <span class="badge bg-danger me-1 mb-2">SQL Server</span>
-            <span class="badge bg-danger me-1 mb-2">Consultas SQL</span>
-            <span class="badge bg-danger me-1 mb-2">Diseño relacional</span>
-            <span class="badge bg-danger me-1 mb-2">Migrations EF</span>
-
-            <span class="badge bg-danger me-1 mb-2">ETL</span>
-            <span class="badge bg-danger me-1 mb-2">Power BI</span>
-            <span class="badge bg-danger me-1 mb-2">Power Query</span>
-          </div>
-          <!-- HERRAMIENTAS -->
-          <div class="col-md-6 col-lg-3">
-            <h5 class="fw-semibold mb-3">Herramientas &amp; DevOps</h5>
-            <span class="badge bg-danger me-1 mb-2">Git</span>
-            <span class="badge bg-danger me-1 mb-2">GitHub</span>
-            <span class="badge bg-danger me-1 mb-2">Docker</span>
-            <span class="badge bg-danger me-1 mb-2">Swagger / OpenAPI</span>
-            <span class="badge bg-danger me-1 mb-2">Postman</span>
-            <span class="badge bg-danger me-1 mb-2">Linux (CLI)</span>
+        <div class="skills-matrix-wrap">
+          <p class="skills-matrix-sub">
+            Aquí muestro mis habilidades respaldadas por certificados. En
+            habilidades como <strong>Power BI / ETL</strong> (sin certificado),
+            incluyo evidencia práctica porque me tocó investigarlo e
+            implementarlo.
+          </p>
+          <div class="skills-matrix-grid" id="skillsMatrix"></div>
+          <div class="skills-matrix-footer">
+            <a class="btn btn-danger" href="certificados.html">
+              <i class="bi bi-award"></i> Ver todos los certificados
+            </a>
           </div>
         </div>
-      </section>
-      <!--Seccion certificados-->
-      <section class="container py-5" id="certificados">
-        <h2 class="section-title">Certificaciones</h2>
-        <div class="section-divider"></div>
-        <p class="text-muted mb-4">
-          Certificados recientes en desarrollo, buenas prácticas, DevOps y
-          sistemas.
-        </p>
-        <div
-          class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4"
-        >
-          <small class="text-secondary"
-            >Vista rápida: 4 certificados destacados</small
-          ><a class="btn btn-sm btn-outline-light" href="certificados.html"
-            >Ver todos los certificados (7)</a
-          >
-        </div>
-        <div class="cert-grid">
-          <article
-            class="cert-card"
-            data-caption="Udemy · 10 de enero de 2026 · 6.5 horas"
-            data-open="img-modal"
-            data-src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg"
-            data-title="Principios SOLID y Clean Code"
-          >
-            <img
-              alt="Certificado: Principios SOLID y Clean Code"
-              class="cert-img"
-              loading="lazy"
-              src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg"
-            />
-            <div class="cert-overlay">
-              <div class="cert-top">
-                <span class="badge bg-danger">Udemy</span>
-                <span class="badge bg-dark">2026</span>
-              </div>
-              <h5 class="cert-title">Principios SOLID y Clean Code</h5>
-              <p class="cert-meta">Fernando Herrera · DevTalles</p>
-              <div class="cert-actions">
-                <a
-                  class="btn btn-sm btn-outline-light cert-verify"
-                  data-skip-modal=""
-                  href="https://ude.my/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85"
-                  rel="noopener"
-                  target="_blank"
-                  >Validar</a
+        <details class="skills-extra mt-4">
+          <summary>
+            <i class="bi bi-list-check"></i> Ver lista completa de tecnologías
+          </summary>
+          <div class="mt-3">
+            <div class="row g-4">
+              <!-- BACKEND -->
+              <div class="col-md-6 col-lg-3">
+                <h5 class="fw-semibold mb-3">Backend &amp; APIs</h5>
+                <span class="badge bg-danger me-1 mb-2">C#</span>
+                <span class="badge bg-danger me-1 mb-2">ASP.NET Core</span>
+                <span class="badge bg-danger me-1 mb-2">Web API (.NET 9)</span>
+                <span class="badge bg-danger me-1 mb-2"
+                  >Entity Framework Core</span
                 >
-                <span class="cert-hint">Click para ampliar</span>
+                <span class="badge bg-danger me-1 mb-2">.NET MVC</span>
+                <span class="badge bg-danger me-1 mb-2">Identity / Roles</span>
+                <span class="badge bg-danger me-1 mb-2">SOLID</span>
+                <span class="badge bg-danger me-1 mb-2">Clean Code</span>
+              </div>
+              <!-- FRONTEND -->
+              <div class="col-md-6 col-lg-3">
+                <h5 class="fw-semibold mb-3">Frontend</h5>
+                <span class="badge bg-danger me-1 mb-2">React</span>
+                <span class="badge bg-danger me-1 mb-2">JavaScript</span>
+                <span class="badge bg-danger me-1 mb-2">HTML5</span>
+                <span class="badge bg-danger me-1 mb-2">CSS3</span>
+                <span class="badge bg-danger me-1 mb-2">Bootstrap 5</span>
+                <span class="badge bg-danger me-1 mb-2">Responsive UI</span>
+              </div>
+              <!-- BASES DE DATOS -->
+              <div class="col-md-6 col-lg-3">
+                <h5 class="fw-semibold mb-3">Bases de datos</h5>
+                <span class="badge bg-danger me-1 mb-2">SQL Server</span>
+                <span class="badge bg-danger me-1 mb-2">Consultas SQL</span>
+                <span class="badge bg-danger me-1 mb-2">Diseño relacional</span>
+                <span class="badge bg-danger me-1 mb-2">Migrations EF</span>
+                <span class="badge bg-danger me-1 mb-2">ETL</span>
+                <span class="badge bg-danger me-1 mb-2">Power BI</span>
+                <span class="badge bg-danger me-1 mb-2">Power Query</span>
+              </div>
+              <!-- HERRAMIENTAS -->
+              <div class="col-md-6 col-lg-3">
+                <h5 class="fw-semibold mb-3">Herramientas &amp; DevOps</h5>
+                <span class="badge bg-danger me-1 mb-2">Git</span>
+                <span class="badge bg-danger me-1 mb-2">GitHub</span>
+                <span class="badge bg-danger me-1 mb-2">Docker</span>
+                <span class="badge bg-danger me-1 mb-2">Swagger / OpenAPI</span>
+                <span class="badge bg-danger me-1 mb-2">Postman</span>
+                <span class="badge bg-danger me-1 mb-2">Linux (CLI)</span>
               </div>
             </div>
-          </article>
-          <article
-            class="cert-card"
-            data-caption="Udemy · 8 de enero de 2026 · 46 horas"
-            data-open="img-modal"
-            data-src="img/certificados/UC-05905a2b-ede8-4501-8960-40204f89b53e.jpg"
-            data-title="React: De cero a experto"
-          >
-            <img
-              alt="Certificado: React: De cero a experto"
-              class="cert-img"
-              loading="lazy"
-              src="img/certificados/UC-05905a2b-ede8-4501-8960-40204f89b53e.jpg"
-            />
-            <div class="cert-overlay">
-              <div class="cert-top">
-                <span class="badge bg-danger">Udemy</span>
-                <span class="badge bg-dark">2026</span>
-              </div>
-              <h5 class="cert-title">React: De cero a experto</h5>
-              <p class="cert-meta">Fernando Herrera · DevTalles</p>
-              <div class="cert-actions">
-                <a
-                  class="btn btn-sm btn-outline-light cert-verify"
-                  data-skip-modal=""
-                  href="https://ude.my/UC-05905a2b-ede8-4501-8960-40204f89b53e"
-                  rel="noopener"
-                  target="_blank"
-                  >Validar</a
-                >
-                <span class="cert-hint">Click para ampliar</span>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="cert-card"
-            data-caption="Udemy · 13 de enero de 2026 · 14 horas"
-            data-open="img-modal"
-            data-src="img/certificados/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a.jpg"
-            data-title="Docker: Guía práctica para desarrolladores"
-          >
-            <img
-              alt="Certificado: Docker: Guía práctica para desarrolladores"
-              class="cert-img"
-              loading="lazy"
-              src="img/certificados/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a.jpg"
-            />
-            <div class="cert-overlay">
-              <div class="cert-top">
-                <span class="badge bg-danger">Udemy</span>
-                <span class="badge bg-dark">2026</span>
-              </div>
-              <h5 class="cert-title">
-                Docker: Guía práctica para desarrolladores
-              </h5>
-              <p class="cert-meta">Fernando Herrera · DevTalles</p>
-              <div class="cert-actions">
-                <a
-                  class="btn btn-sm btn-outline-light cert-verify"
-                  data-skip-modal=""
-                  href="https://ude.my/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a"
-                  rel="noopener"
-                  target="_blank"
-                  >Validar</a
-                >
-                <span class="cert-hint">Click para ampliar</span>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="cert-card"
-            data-caption="Cisco Networking Academy · 03 de diciembre de 2025"
-            data-open="img-modal"
-            data-src="img/certificados/Linux Essentials.png"
-            data-title="Linux Essentials"
-          >
-            <img
-              alt="Certificado: Linux Essentials"
-              class="cert-img"
-              loading="lazy"
-              src="img/certificados/Linux Essentials.png"
-            />
-            <div class="cert-overlay">
-              <div class="cert-top">
-                <span class="badge bg-danger">Cisco Networking Academy</span>
-                <span class="badge bg-dark">2025</span>
-              </div>
-              <h5 class="cert-title">Linux Essentials</h5>
-              <p class="cert-meta">Cisco Networking Academy · NDG</p>
-              <div class="cert-actions">
-                <span class="badge bg-dark cert-verify" data-skip-modal=""
-                  >Sin enlace</span
-                >
-                <span class="cert-hint">Click para ampliar</span>
-              </div>
-            </div>
-          </article>
-        </div>
+          </div>
+        </details>
       </section>
       <!--Seccion proyectos-->
       <section class="container py-5" id="proyectos">
@@ -610,7 +485,7 @@
             </div>
           </div>
         </div>
-        <hr class="my-5 opacity-25" />
+
         <div
           class="project-block js-project"
           data-descriptions="Inicio (presentación y navegación).||Sobre Diser (quiénes somos y valores).||Servicios, planes y precios.||Cobertura y zonas de servicio.||Galería (imágenes y evidencias).||FAQ (preguntas frecuentes).||Soporte al cliente (canales y ayuda).||Contacto (formularios y datos).||Avisos o comunicados importantes.||Consejos y recomendaciones para usuarios."
@@ -926,7 +801,26 @@
               type="button"
             ></button>
           </div>
-          <div class="modal-body p-0">
+          <div class="modal-body p-0 position-relative">
+            <button
+              aria-label="Anterior"
+              class="img-nav img-nav--prev"
+              hidden=""
+              id="imgModalPrev"
+              type="button"
+            >
+              ‹
+            </button>
+            <button
+              aria-label="Siguiente"
+              class="img-nav img-nav--next"
+              hidden=""
+              id="imgModalNext"
+              type="button"
+            >
+              ›
+            </button>
+            <div class="img-counter" hidden="" id="imgModalCounter"></div>
             <img
               alt=""
               id="imgModalSrc"
@@ -945,5 +839,6 @@
     <script src="js/navbar-sharingan.js"></script>
     <script src="js/carousel-controls.js"></script>
     <script src="js/carousel-desc.js"></script>
+    <script src="js/skills-matrix.js"></script>
   </body>
 </html>

@@ -15,7 +15,36 @@
 
   let activeFilter = "all";
 
-  const normalize = (s) => (s || "").toString().toLowerCase().trim();
+  const normalize = (s) => {
+    return (s || "")
+      .toString()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "") // sin acentos
+      .replace(/[^a-z0-9]+/g, " ")      // quita símbolos (+,/,etc)
+      .trim();
+  };
+
+  // ------------------------------------------
+  // Soporte de URL params: ?tag=backend&q=react
+  // ------------------------------------------
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialTag = normalize(urlParams.get("tag"));
+  const initialQuery = (urlParams.get("q") || "").toString().trim();
+
+  if (initialQuery && searchInput) {
+    searchInput.value = initialQuery;
+  }
+
+  if (initialTag && initialTag !== "all") {
+    // Activa el botón si existe
+    const btn = filterButtons.find((b) => normalize(b.getAttribute("data-filter")) === initialTag);
+    if (btn) {
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = initialTag;
+    }
+  }
 
   function cardMatches(card) {
     const provider = normalize(card.dataset.provider);

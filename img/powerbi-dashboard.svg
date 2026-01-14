@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset="1" stop-color="#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1060" height="560" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+  <text x="120" y="155" fill="#f5f5f5" font-size="38" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Evidencia Power BI (Placeholder)
+  </text>
+  <text x="120" y="210" fill="#b0b0b0" font-size="20" font-family="Arial, Helvetica, sans-serif">
+    Reemplaza este archivo por tu captura real del dashboard cuando la tengas.
+  </text>
+
+  <!-- fake chart cards -->
+  <rect x="120" y="260" width="320" height="160" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)"/>
+  <rect x="470" y="260" width="610" height="160" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)"/>
+  <rect x="120" y="440" width="430" height="150" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)"/>
+  <rect x="580" y="440" width="500" height="150" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)"/>
+
+  <!-- bars -->
+  <g fill="rgba(193,18,31,0.75)">
+    <rect x="155" y="382" width="28" height="28" rx="6"/>
+    <rect x="193" y="352" width="28" height="58" rx="6"/>
+    <rect x="231" y="330" width="28" height="80" rx="6"/>
+    <rect x="269" y="300" width="28" height="110" rx="6"/>
+  </g>
+
+  <!-- line -->
+  <path d="M520 380 C 610 300, 720 420, 840 320 S 1040 360, 1060 300" fill="none" stroke="rgba(59,130,246,0.75)" stroke-width="5"/>
+
+  <text x="120" y="650" fill="#b0b0b0" font-size="16" font-family="Arial, Helvetica, sans-serif">
+    Tip: si tu captura es PNG/JPG, cámbiale el nombre a powerbi-dashboard.png y actualiza el JS si lo deseas.
+  </text>
+</svg>

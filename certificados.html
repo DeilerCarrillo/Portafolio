@@ -1,27 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certificaciones | Deiler Carrillo</title>
-    <meta name="description" content="Certificaciones y cursos completados por Deiler Carrillo (Udemy, Cisco Networking Academy)." />
-
-    <!-- Bootstrap base -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-
-    <!-- ===== Estilos propios ===== -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/certificates.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Certificaciones | Deiler Carrillo</title>
+<meta content="Certificaciones y cursos completados por Deiler Carrillo (Udemy, Cisco Networking Academy)." name="description"/>
+<!-- Bootstrap base -->
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- ===== Estilos propios ===== -->
+<link href="css/base.css" rel="stylesheet"/>
+<link href="css/layout.css" rel="stylesheet"/>
+<link href="css/components.css" rel="stylesheet"/>
+<link href="css/certificates.css" rel="stylesheet"/>
+<link href="css/utilities.css" rel="stylesheet"/>
+<link href="css/loader.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 <div class="container">
 <a aria-label="Inicio" class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html#home">
 <span aria-hidden="true" class="brand-eye">
@@ -57,55 +55,49 @@
 </div>
 </div>
 </nav>
-
-    <main>
-      <section class="container py-5">
-        <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
-          <div>
-            <h1 class="section-title mb-1">Certificaciones</h1>
-            <div class="section-divider"></div>
-            <p class="text-muted mb-0">
+<main>
+<section class="container py-5">
+<div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+<div>
+<h1 class="section-title mb-1">Certificaciones</h1>
+<div class="section-divider"></div>
+<p class="text-muted mb-0">
               Cursos y certificaciones que respaldan mis habilidades en desarrollo, DevOps y sistemas.
             </p>
-          </div>
-
-          <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-sm btn-outline-light" href="index.html#home">
-              <i class="bi bi-arrow-left"></i> Volver al portafolio
+</div>
+<div class="d-flex flex-wrap gap-2">
+<a class="btn btn-sm btn-outline-light" href="index.html#home">
+<i class="bi bi-arrow-left"></i> Volver al portafolio
             </a>
-          </div>
-        </div>
-
-        <div class="cert-stats mb-4">
-          <span class="badge bg-dark">Total: 7</span>
-          <span class="badge bg-danger">Udemy: 6</span>
-          <span class="badge bg-primary">Cisco: 1</span>
-        </div>
-
-        <div class="cert-toolbar mb-3">
-          <div class="btn-group btn-group-sm cert-filters" role="group" aria-label="Filtros de certificados">
-            <button class="btn btn-outline-light active" type="button" data-filter="all">Todos</button>
-            <button class="btn btn-outline-light" type="button" data-filter="udemy">Udemy</button>
-            <button class="btn btn-outline-light" type="button" data-filter="cisco">Cisco</button>
-            <button class="btn btn-outline-light" type="button" data-filter="devops">DevOps</button>
-            <button class="btn btn-outline-light" type="button" data-filter="backend">Backend</button>
-            <button class="btn btn-outline-light" type="button" data-filter="frontend">Frontend</button>
-            <button class="btn btn-outline-light" type="button" data-filter="sistemas">Sistemas</button>
-          </div>
-
-          <div class="cert-search">
-            <div class="input-group input-group-sm">
-              <span class="input-group-text bg-dark text-light border-secondary">
-                <i class="bi bi-search"></i>
-              </span>
-              <input id="certSearch" class="form-control bg-dark text-light border-secondary" type="search" placeholder="Buscar por título o instructor..." aria-label="Buscar certificados" />
-              <button class="btn btn-outline-light" type="button" id="certClear">Limpiar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-grid" id="certGrid">
-          <article class="cert-card" data-caption="Udemy · 10 de enero de 2026 · 6.5 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg" data-tags="backend,buenas-practicas" data-title="Principios SOLID y Clean Code">
+</div>
+</div>
+<div class="cert-stats mb-4">
+<span class="badge bg-dark">Total: 7</span>
+<span class="badge bg-danger">Udemy: 6</span>
+<span class="badge bg-primary">Cisco: 1</span>
+</div>
+<div class="cert-toolbar mb-3">
+<div aria-label="Filtros de certificados" class="btn-group btn-group-sm cert-filters" role="group">
+<button class="btn btn-outline-light active" data-filter="all" type="button">Todos</button>
+<button class="btn btn-outline-light" data-filter="udemy" type="button">Udemy</button>
+<button class="btn btn-outline-light" data-filter="cisco" type="button">Cisco</button>
+<button class="btn btn-outline-light" data-filter="devops" type="button">DevOps</button>
+<button class="btn btn-outline-light" data-filter="backend" type="button">Backend</button>
+<button class="btn btn-outline-light" data-filter="frontend" type="button">Frontend</button>
+<button class="btn btn-outline-light" data-filter="sistemas" type="button">Sistemas</button>
+</div>
+<div class="cert-search">
+<div class="input-group input-group-sm">
+<span class="input-group-text bg-dark text-light border-secondary">
+<i class="bi bi-search"></i>
+</span>
+<input aria-label="Buscar certificados" class="form-control bg-dark text-light border-secondary" id="certSearch" placeholder="Buscar por título o instructor..." type="search"/>
+<button class="btn btn-outline-light" id="certClear" type="button">Limpiar</button>
+</div>
+</div>
+</div>
+<div class="cert-grid" id="certGrid">
+<article class="cert-card" data-caption="Udemy · 10 de enero de 2026 · 6.5 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg" data-tags="backend,buenas-practicas" data-title="Principios SOLID y Clean Code">
 <img alt="Certificado: Principios SOLID y Clean Code" class="cert-img" loading="lazy" src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg"/>
 <div class="cert-overlay">
 <div class="cert-top">
@@ -135,7 +127,7 @@
 </div>
 </div>
 </article>
-<article class="cert-card" data-caption="Udemy · 13 de enero de 2026 · 12 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-e636ba51-1a8f-4435-a180-d8b93615bebf.jpg" data-tags="git,herramientas" data-title="GIT + GitHub: Control de versiones desde cero">
+<article class="cert-card" data-caption="Udemy · 13 de enero de 2026 · 12 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-e636ba51-1a8f-4435-a180-d8b93615bebf.jpg" data-tags="git,herramientas,devops" data-title="GIT + GitHub: Control de versiones desde cero">
 <img alt="Certificado: GIT + GitHub: Control de versiones desde cero" class="cert-img" loading="lazy" src="img/certificados/UC-e636ba51-1a8f-4435-a180-d8b93615bebf.jpg"/>
 <div class="cert-overlay">
 <div class="cert-top">
@@ -210,50 +202,37 @@
 </div>
 </div>
 </article>
-        </div>
-
-        <div id="certEmpty" class="cert-empty d-none mt-3">No se encontraron resultados con esos filtros.</div>
-
-        <p class="text-secondary small mt-4 mb-0">
+</div>
+<div class="cert-empty d-none mt-3" id="certEmpty">No se encontraron resultados con esos filtros.</div>
+<p class="text-secondary small mt-4 mb-0">
           Tip: haz click en cualquier certificado para ampliarlo.
         </p>
-      </section>
-
-      <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content modal-dark">
-          <div class="modal-header modal-dark-header">
-            <div>
-              <h6 class="modal-title text-light mb-0" id="imgModalTitle">
+</section>
+<div aria-hidden="true" class="modal fade" id="imgModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-xl">
+<div class="modal-content modal-dark">
+<div class="modal-header modal-dark-header">
+<div>
+<h6 class="modal-title text-light mb-0" id="imgModalTitle">
                 Vista previa
               </h6>
-              <small class="text-secondary" id="imgModalCaption"></small>
-            </div>
-
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Cerrar"
-            ></button>
-          </div>
-
-          <div class="modal-body p-0">
-            <img
-              id="imgModalSrc"
-              src=""
-              alt=""
-              style="width: 100%; height: auto; display: block"
-            />
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Scripts -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/navbar-sharingan.js"></script>
-    <script src="js/carousel-controls.js"></script>
-    <script src="js/certificates-page.js"></script>
-  </body>
+<small class="text-secondary" id="imgModalCaption"></small>
+</div>
+<button aria-label="Cerrar" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body p-0 position-relative">
+<button aria-label="Anterior" class="img-nav img-nav--prev" hidden="" id="imgModalPrev" type="button">‹</button>
+<button aria-label="Siguiente" class="img-nav img-nav--next" hidden="" id="imgModalNext" type="button">›</button>
+<div class="img-counter" hidden="" id="imgModalCounter"></div>
+<img alt="" id="imgModalSrc" src="" style="width: 100%; height: auto; display: block"/>
+</div>
+</div>
+</div>
+</div></main>
+<!-- Scripts -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/navbar-sharingan.js"></script>
+<script src="js/carousel-controls.js"></script>
+<script src="js/certificates-page.js"></script>
+</body>
 </html>
