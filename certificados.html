@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificaciones | Deiler Carrillo</title>
+    <meta name="description" content="Certificaciones y cursos completados por Deiler Carrillo (Udemy, Cisco Networking Academy)." />
+
+    <!-- Bootstrap base -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <!-- ===== Estilos propios ===== -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/certificates.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a aria-label="Inicio" class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html#home">
+<span aria-hidden="true" class="brand-eye">
+<!-- Tomoe (inicial) -->
+<span class="eye eye--tomoe is-active">
+<span class="sharingan">
+<img alt="" class="sharingan-layer base" decoding="async" src="img/loader/sharingan-base.png"/>
+<img alt="" class="sharingan-layer tomoe" decoding="async" src="img/loader/tomoe-tomoe.png"/>
+<img alt="" class="sharingan-layer center" decoding="async" src="img/loader/tomoe-center.png"/>
+</span>
+</span>
+<!-- Mangekyō (scroll) -->
+<span class="eye eye--mangekyou">
+<span class="sharingan sharingan--mangekyou">
+<img alt="" class="sharingan-layer mangekyou" decoding="async" src="img/loader/mangenkyou-symbol.png"/>
+<img alt="" class="sharingan-layer mangekyou-center" decoding="async" src="img/loader/mangenkyou-center.png"/>
+</span>
+</span>
+</span>
+<span>Deiler</span>
+</a>
+<button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNavAltMarkup" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<div class="navbar-nav ms-auto">
+<a aria-current="page" class="nav-link" href="index.html#home">Inicio</a>
+<a class="nav-link" href="index.html#sobre-mi">Sobre mí</a>
+<a class="nav-link" href="index.html#habilidades">Habilidades</a>
+<a class="nav-link active" href="certificados.html">Certificados</a>
+<a class="nav-link" href="index.html#proyectos">Proyectos</a>
+</div>
+</div>
+</div>
+</nav>
+
+    <main>
+      <section class="container py-5">
+        <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+          <div>
+            <h1 class="section-title mb-1">Certificaciones</h1>
+            <div class="section-divider"></div>
+            <p class="text-muted mb-0">
+              Cursos y certificaciones que respaldan mis habilidades en desarrollo, DevOps y sistemas.
+            </p>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-sm btn-outline-light" href="index.html#home">
+              <i class="bi bi-arrow-left"></i> Volver al portafolio
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-stats mb-4">
+          <span class="badge bg-dark">Total: 7</span>
+          <span class="badge bg-danger">Udemy: 6</span>
+          <span class="badge bg-primary">Cisco: 1</span>
+        </div>
+
+        <div class="cert-toolbar mb-3">
+          <div class="btn-group btn-group-sm cert-filters" role="group" aria-label="Filtros de certificados">
+            <button class="btn btn-outline-light active" type="button" data-filter="all">Todos</button>
+            <button class="btn btn-outline-light" type="button" data-filter="udemy">Udemy</button>
+            <button class="btn btn-outline-light" type="button" data-filter="cisco">Cisco</button>
+            <button class="btn btn-outline-light" type="button" data-filter="devops">DevOps</button>
+            <button class="btn btn-outline-light" type="button" data-filter="backend">Backend</button>
+            <button class="btn btn-outline-light" type="button" data-filter="frontend">Frontend</button>
+            <button class="btn btn-outline-light" type="button" data-filter="sistemas">Sistemas</button>
+          </div>
+
+          <div class="cert-search">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text bg-dark text-light border-secondary">
+                <i class="bi bi-search"></i>
+              </span>
+              <input id="certSearch" class="form-control bg-dark text-light border-secondary" type="search" placeholder="Buscar por título o instructor..." aria-label="Buscar certificados" />
+              <button class="btn btn-outline-light" type="button" id="certClear">Limpiar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-grid" id="certGrid">
+          <article class="cert-card" data-caption="Udemy · 10 de enero de 2026 · 6.5 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg" data-tags="backend,buenas-practicas" data-title="Principios SOLID y Clean Code">
+<img alt="Certificado: Principios SOLID y Clean Code" class="cert-img" loading="lazy" src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg"/>
+<div class="cert-overlay">
+<div class="cert-top">
+<span class="badge bg-danger">Udemy</span>
+<span class="badge bg-dark">2026</span>
+</div>
+<h5 class="cert-title">Principios SOLID y Clean Code</h5>
+<p class="cert-meta">Fernando Herrera · DevTalles</p>
+<div class="cert-actions">
+<a class="btn btn-sm btn-outline-light cert-verify" data-skip-modal="" href="https://ude.my/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85" rel="noopener" target="_blank">Validar</a>
+<span class="cert-hint">Click para ampliar</span>
+</div>
+</div>
+</article>
+<article class="cert-card" data-caption="Udemy · 8 de enero de 2026 · 46 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-05905a2b-ede8-4501-8960-40204f89b53e.jpg" data-tags="frontend,react" data-title="React: De cero a experto">
+<img alt="Certificado: React: De cero a experto" class="cert-img" loading="lazy" src="img/certificados/UC-05905a2b-ede8-4501-8960-40204f89b53e.jpg"/>
+<div class="cert-overlay">
+<div class="cert-top">
+<span class="badge bg-danger">Udemy</span>
+<span class="badge bg-dark">2026</span>
+</div>
+<h5 class="cert-title">React: De cero a experto</h5>
+<p class="cert-meta">Fernando Herrera · DevTalles</p>
+<div class="cert-actions">
+<a class="btn btn-sm btn-outline-light cert-verify" data-skip-modal="" href="https://ude.my/UC-05905a2b-ede8-4501-8960-40204f89b53e" rel="noopener" target="_blank">Validar</a>
+<span class="cert-hint">Click para ampliar</span>
+</div>
+</div>
+</article>
+<article class="cert-card" data-caption="Udemy · 13 de enero de 2026 · 12 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-e636ba51-1a8f-4435-a180-d8b93615bebf.jpg" data-tags="git,herramientas" data-title="GIT + GitHub: Control de versiones desde cero">
+<img alt="Certificado: GIT + GitHub: Control de versiones desde cero" class="cert-img" loading="lazy" src="img/certificados/UC-e636ba51-1a8f-4435-a180-d8b93615bebf.jpg"/>
+<div class="cert-overlay">
+<div class="cert-top">
+<span class="badge bg-danger">Udemy</span>
+<span class="badge bg-dark">2026</span>
+</div>
+<h5 class="cert-title">GIT + GitHub: Control de versiones desde cero</h5>
+<p class="cert-meta">Fernando Herrera · DevTalles</p>
+<div class="cert-actions">
+<a class="btn btn-sm btn-outline-light cert-verify" data-skip-modal="" href="https://ude.my/UC-e636ba51-1a8f-4435-a180-d8b93615bebf" rel="noopener" target="_blank">Validar</a>
+<span class="cert-hint">Click para ampliar</span>
+</div>
+</div>
+</article>
+<article class="cert-card" data-caption="Udemy · 26 de diciembre de 2025 · 13.5 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-ecc0908f-e3f3-4fe1-a02c-ccb73d038cec.jpg" data-tags=".net,api,backend" data-title="Master API RESTful con ASP.NET Core Web API (.NET 9)">
+<img alt="Certificado: Master API RESTful con ASP.NET Core Web API (.NET 9)" class="cert-img" loading="lazy" src="img/certificados/UC-ecc0908f-e3f3-4fe1-a02c-ccb73d038cec.jpg"/>
+<div class="cert-overlay">
+<div class="cert-top">
+<span class="badge bg-danger">Udemy</span>
+<span class="badge bg-dark">2025</span>
+</div>
+<h5 class="cert-title">Master API RESTful con ASP.NET Core Web API (.NET 9)</h5>
+<p class="cert-meta">render2web</p>
+<div class="cert-actions">
+<a class="btn btn-sm btn-outline-light cert-verify" data-skip-modal="" href="https://ude.my/UC-ecc0908f-e3f3-4fe1-a02c-ccb73d038cec" rel="noopener" target="_blank">Validar</a>
+<span class="cert-hint">Click para ampliar</span>
+</div>
+</div>
+</article>
+<article class="cert-card" data-caption="Udemy · 13 de enero de 2026 · 14 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a.jpg" data-tags="devops,docker" data-title="Docker: Guía práctica para desarrolladores">
+<img alt="Certificado: Docker: Guía práctica para desarrolladores" class="cert-img" loading="lazy" src="img/certificados/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a.jpg"/>
+<div class="cert-overlay">
+<div class="cert-top">
+<span class="badge bg-danger">Udemy</span>
+<span class="badge bg-dark">2026</span>
+</div>
+<h5 class="cert-title">Docker: Guía práctica para desarrolladores</h5>
+<p class="cert-meta">Fernando Herrera · DevTalles</p>
+<div class="cert-actions">
+<a class="btn btn-sm btn-outline-light cert-verify" data-skip-modal="" href="https://ude.my/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a" rel="noopener" target="_blank">Validar</a>
+<span class="cert-hint">Click para ampliar</span>
+</div>
+</div>
+</article>
+<article class="cert-card" data-caption="Udemy · 1 de enero de 2026 · 8.5 horas" data-open="img-modal" data-provider="udemy" data-src="img/certificados/UC-0fd72c25-af2e-4c58-b6ca-08ec49787928.jpg" data-tags=".net,api,backend" data-title="Consume una API RESTful con .NET MVC (.NET 9)">
+<img alt="Certificado: Consume una API RESTful con .NET MVC (.NET 9)" class="cert-img" loading="lazy" src="img/certificados/UC-0fd72c25-af2e-4c58-b6ca-08ec49787928.jpg"/>
+<div class="cert-overlay">
+<div class="cert-top">
+<span class="badge bg-danger">Udemy</span>
+<span class="badge bg-dark">2026</span>
+</div>
+<h5 class="cert-title">Consume una API RESTful con .NET MVC (.NET 9)</h5>
+<p class="cert-meta">render2web</p>
+<div class="cert-actions">
+<a class="btn btn-sm btn-outline-light cert-verify" data-skip-modal="" href="https://ude.my/UC-0fd72c25-af2e-4c58-b6ca-08ec49787928" rel="noopener" target="_blank">Validar</a>
+<span class="cert-hint">Click para ampliar</span>
+</div>
+</div>
+</article>
+<article class="cert-card" data-caption="Cisco Networking Academy · 03 de diciembre de 2025" data-open="img-modal" data-provider="cisco" data-src="img/certificados/Linux Essentials.png" data-tags="linux,sistemas" data-title="Linux Essentials">
+<img alt="Certificado: Linux Essentials" class="cert-img" loading="lazy" src="img/certificados/Linux Essentials.png"/>
+<div class="cert-overlay">
+<div class="cert-top">
+<span class="badge bg-danger">Cisco Networking Academy</span>
+<span class="badge bg-dark">2025</span>
+</div>
+<h5 class="cert-title">Linux Essentials</h5>
+<p class="cert-meta">Cisco Networking Academy · NDG</p>
+<div class="cert-actions">
+<span class="badge bg-dark cert-verify" data-skip-modal="">Sin enlace</span>
+<span class="cert-hint">Click para ampliar</span>
+</div>
+</div>
+</article>
+        </div>
+
+        <div id="certEmpty" class="cert-empty d-none mt-3">No se encontraron resultados con esos filtros.</div>
+
+        <p class="text-secondary small mt-4 mb-0">
+          Tip: haz click en cualquier certificado para ampliarlo.
+        </p>
+      </section>
+
+      <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content modal-dark">
+          <div class="modal-header modal-dark-header">
+            <div>
+              <h6 class="modal-title text-light mb-0" id="imgModalTitle">
+                Vista previa
+              </h6>
+              <small class="text-secondary" id="imgModalCaption"></small>
+            </div>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+
+          <div class="modal-body p-0">
+            <img
+              id="imgModalSrc"
+              src=""
+              alt=""
+              style="width: 100%; height: auto; display: block"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar-sharingan.js"></script>
+    <script src="js/carousel-controls.js"></script>
+    <script src="js/certificates-page.js"></script>
+  </body>
+</html>

@@ -1,132 +1,122 @@
 <!DOCTYPE html>
+
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deiler Carrillo | Desarrollador .NET Junior | Backend</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Deiler Carrillo | Desarrollador Full Stack .NET (Junior)</title>
     <meta
+      content="Portafolio de Deiler David Carrillo Aguilar, desarrollador Full Stack .NET (Junior). Construyo aplicaciones web con ASP.NET Core + SQL Server, integrando Web APIs, autenticación, SOLID/Clean Code; también tengo experiencia en Power BI/ETL y uso Git, Docker y Linux."
       name="description"
-      content="Portafolio de Deiler Carrillo, desarrollador .NET Junior con experiencia en ASP.NET Core, SQL Server, ETL y Power BI."
     />
     <!-- Bootstrap base -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
     />
-
     <!-- ===== Estilos propios ===== -->
-
     <!-- Base (variables, colores, tipografía) -->
-    <link rel="stylesheet" href="css/base.css" />
-
+    <link href="css/base.css" rel="stylesheet" />
     <!-- Layout (body, sections, estructura general) -->
-    <link rel="stylesheet" href="css/layout.css" />
-
+    <link href="css/layout.css" rel="stylesheet" />
     <!-- Loader (Sharingan / Mangekyō) -->
-    <link rel="stylesheet" href="css/loader.css" />
-
+    <link href="css/loader.css" rel="stylesheet" />
     <!-- Componentes (cards, badges, botones, iconos sociales) -->
-    <link rel="stylesheet" href="css/components.css" />
-
+    <link href="css/components.css" rel="stylesheet" />
     <!-- Proyectos -->
-    <link rel="stylesheet" href="css/projects.css" />
-
+    <link href="css/projects.css" rel="stylesheet" />
+    <!-- Certificados -->
+    <link href="css/certificates.css" rel="stylesheet" />
     <!-- Utilidades y overrides -->
-    <link rel="stylesheet" href="css/utilities.css" />
+    <link href="css/utilities.css" rel="stylesheet" />
   </head>
-
   <body>
     <!-- NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
         <a
+          aria-label="Inicio"
           class="navbar-brand fw-bold d-flex align-items-center gap-2"
           href="#home"
-          aria-label="Inicio"
         >
-          <span class="brand-eye" aria-hidden="true">
+          <span aria-hidden="true" class="brand-eye">
             <!-- Tomoe (inicial) -->
             <span class="eye eye--tomoe is-active">
               <span class="sharingan">
                 <img
-                  src="img/loader/sharingan-base.png"
+                  alt=""
                   class="sharingan-layer base"
-                  alt=""
                   decoding="async"
+                  src="img/loader/sharingan-base.png"
                 />
                 <img
-                  src="img/loader/tomoe-tomoe.png"
+                  alt=""
                   class="sharingan-layer tomoe"
-                  alt=""
                   decoding="async"
+                  src="img/loader/tomoe-tomoe.png"
                 />
                 <img
-                  src="img/loader/tomoe-center.png"
-                  class="sharingan-layer center"
                   alt=""
+                  class="sharingan-layer center"
                   decoding="async"
+                  src="img/loader/tomoe-center.png"
                 />
               </span>
             </span>
-
             <!-- Mangekyō (scroll) -->
             <span class="eye eye--mangekyou">
               <span class="sharingan sharingan--mangekyou">
                 <img
-                  src="img/loader/mangenkyou-symbol.png"
-                  class="sharingan-layer mangekyou"
                   alt=""
+                  class="sharingan-layer mangekyou"
                   decoding="async"
+                  src="img/loader/mangenkyou-symbol.png"
                 />
                 <img
-                  src="img/loader/mangenkyou-center.png"
-                  class="sharingan-layer mangekyou-center"
                   alt=""
+                  class="sharingan-layer mangekyou-center"
                   decoding="async"
+                  src="img/loader/mangenkyou-center.png"
                 />
               </span>
             </span>
           </span>
-
           <span>Deiler</span>
         </a>
-
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavAltMarkup"
+          data-bs-toggle="collapse"
+          type="button"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#home"
+            <a aria-current="page" class="nav-link active" href="#home"
               >Inicio</a
             >
             <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+            <a class="nav-link" href="#habilidades">Habilidades</a>
+            <a class="nav-link" href="certificados.html">Certificados</a>
             <a class="nav-link" href="#proyectos">Proyectos</a>
-            <a class="nav-link" href="#contacto">Contacto</a>
           </div>
         </div>
       </div>
     </nav>
-
     <!--Contenido Principal-->
     <main>
-      <section id="home" class="container py-5 text-center">
+      <section class="container py-5 text-center" id="home">
         <!-- Foto -->
         <img
-          src="img/profile.png"
           alt="Foto de Deiler"
           class="rounded-circle shadow"
+          src="img/profile.png"
           style="width: 160px; height: 160px; object-fit: cover"
         />
         <!-- Nombre -->
@@ -134,325 +124,792 @@
           <span>Deiler David Carrillo Aguilar</span>
         </h1>
         <!-- Rol -->
-        <p class="hero-role mb-2">Desarrollador Backend .NET (Junior)</p>
-
+        <p class="hero-role mb-2">Desarrollador Full Stack .NET (Junior)</p>
         <!-- Stack -->
-        <p class="hero-desc mb-4">ASP.NET Core · EF Core · SQL Server</p>
-
+        <p class="hero-desc mb-4">
+          ASP.NET Core | Web API | EF Core | SQL Server | React | Git | Docker |
+          Power BI | ETL
+        </p>
         <!-- Botones principales -->
         <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
-          <a href="#proyectos" class="btn btn-primary btn-sm px-4">
+          <a class="btn btn-primary btn-sm px-4" href="#proyectos">
             Ver proyectos
           </a>
           <a
-            href="assets/CV-Deiler-Carrillo.pdf"
             class="btn btn-outline-light btn-sm px-4"
-            target="_blank"
+            href="assets/CV-Deiler-Carrillo.pdf"
             rel="noopener"
+            target="_blank"
           >
             Descargar CV
           </a>
         </div>
-
         <!-- Iconos sociales -->
         <div class="d-flex justify-content-center gap-3">
           <a
-            href="https://www.linkedin.com/in/deiler-david-carrillo-aguilar-51a59b28b/"
-            target="_blank"
-            rel="noopener"
-            class="social-icon"
             aria-label="LinkedIn"
+            class="social-icon"
+            href="https://www.linkedin.com/in/deiler-david-carrillo-aguilar-51a59b28b/"
+            rel="noopener"
+            target="_blank"
           >
             <i class="bi bi-linkedin"></i>
           </a>
-
           <a
-            href="https://github.com/DeilerCarrillo"
-            target="_blank"
-            rel="noopener"
-            class="social-icon"
             aria-label="GitHub"
+            class="social-icon"
+            href="https://github.com/DeilerCarrillo"
+            rel="noopener"
+            target="_blank"
           >
             <i class="bi bi-github"></i>
           </a>
-
           <a
-            href="mailto:deilerdavidcarrillo@hotmail.com"
-            class="social-icon"
             aria-label="Email"
+            class="social-icon"
+            href="mailto:deilerdavidcarrillo@hotmail.com"
           >
             <i class="bi bi-envelope-fill"></i>
           </a>
         </div>
       </section>
       <!--Seccion sobre mi-->
-      <section id="sobre-mi" class="container py-5">
+      <section class="container py-5" id="sobre-mi">
         <h2 class="section-title">Sobre mí</h2>
         <div class="section-divider"></div>
-        <p>
-          Desarrollador Backend .NET en formación, enfocado en la creación de
-          aplicaciones web seguras y escalables. Experiencia desarrollando
-          soluciones con ASP.NET Core, Entity Framework Core y SQL Server,
-          aplicando control de acceso por roles y buenas prácticas de
-          arquitectura.
+
+        <p class="mb-0">
+          Construyo aplicaciones web con <strong>ASP.NET Core</strong> +
+          <strong>SQL Server</strong>, integrando <strong>APIs</strong>,
+          autenticación y buenas prácticas (<strong>SOLID</strong> /
+          <strong>Clean Code</strong>). También tengo experiencia con
+          <strong>Power BI</strong>/<strong>ETL</strong> para análisis y
+          reportes, y uso <strong>Git</strong>, <strong>Docker</strong> y
+          <strong>Linux</strong> para entornos de desarrollo.
         </p>
       </section>
       <!-- Seccion habilidades -->
-      <section id="habilidades" class="container py-5">
+      <section class="container py-5" id="habilidades">
         <h2 class="section-title">Habilidades técnicas</h2>
         <div class="section-divider"></div>
-
         <div class="row g-4">
           <!-- BACKEND -->
-          <div class="col-md-4">
-            <h5 class="fw-semibold mb-3">Backend & .NET</h5>
-            <span class="badge bg-danger me-1 mb-2">ASP.NET Core 8</span>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-semibold mb-3">Backend &amp; APIs</h5>
             <span class="badge bg-danger me-1 mb-2">C#</span>
+            <span class="badge bg-danger me-1 mb-2">ASP.NET Core</span>
+            <span class="badge bg-danger me-1 mb-2">Web API (.NET 9)</span>
             <span class="badge bg-danger me-1 mb-2">Entity Framework Core</span>
-            <span class="badge bg-danger me-1 mb-2">APIs REST</span>
-          </div>
-          <!-- BASES DE DATOS -->
-          <div class="col-md-4">
-            <h5 class="fw-semibold mb-3">Bases de datos & BI</h5>
-            <span class="badge bg-danger me-1 mb-2">SQL Server</span>
-            <span class="badge bg-danger me-1 mb-2">NoSQL (conceptos)</span>
-            <span class="badge bg-danger me-1 mb-2">ETL</span>
-            <span class="badge bg-danger me-1 mb-2">Power BI</span>
+            <span class="badge bg-danger me-1 mb-2">.NET MVC</span>
+            <span class="badge bg-danger me-1 mb-2">Identity / Roles</span>
+            <span class="badge bg-danger me-1 mb-2">SOLID</span>
+            <span class="badge bg-danger me-1 mb-2">Clean Code</span>
           </div>
           <!-- FRONTEND -->
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-3">
             <h5 class="fw-semibold mb-3">Frontend</h5>
+            <span class="badge bg-danger me-1 mb-2">React</span>
+            <span class="badge bg-danger me-1 mb-2">JavaScript</span>
             <span class="badge bg-danger me-1 mb-2">HTML5</span>
             <span class="badge bg-danger me-1 mb-2">CSS3</span>
-            <span class="badge bg-danger me-1 mb-2">JavaScript</span>
             <span class="badge bg-danger me-1 mb-2">Bootstrap 5</span>
+            <span class="badge bg-danger me-1 mb-2">Responsive UI</span>
           </div>
-          <!-- SISTEMAS & VIRTUALIZACIÓN -->
-          <div class="col-md-4">
-            <h5 class="fw-semibold mb-3">Sistemas & Virtualización</h5>
-            <span class="badge bg-danger me-1 mb-2">Windows Server 2022</span>
-            <span class="badge bg-danger me-1 mb-2">Linux / Ubuntu Server</span>
-            <span class="badge bg-danger me-1 mb-2">Hyper-V</span>
-            <span class="badge bg-danger me-1 mb-2">VirtualBox</span>
-            <span class="badge bg-danger me-1 mb-2">DHCP</span>
-            <span class="badge bg-danger me-1 mb-2">DNS</span>
-            <span class="badge bg-danger me-1 mb-2">IIS</span>
-            <span class="badge bg-danger me-1 mb-2">Backups automáticos</span>
-            <span class="badge bg-danger me-1 mb-2">NTFS</span>
+          <!-- BASES DE DATOS -->
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-semibold mb-3">Bases de datos</h5>
+            <span class="badge bg-danger me-1 mb-2">SQL Server</span>
+            <span class="badge bg-danger me-1 mb-2">Consultas SQL</span>
+            <span class="badge bg-danger me-1 mb-2">Diseño relacional</span>
+            <span class="badge bg-danger me-1 mb-2">Migrations EF</span>
+
+            <span class="badge bg-danger me-1 mb-2">ETL</span>
+            <span class="badge bg-danger me-1 mb-2">Power BI</span>
+            <span class="badge bg-danger me-1 mb-2">Power Query</span>
+          </div>
+          <!-- HERRAMIENTAS -->
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-semibold mb-3">Herramientas &amp; DevOps</h5>
+            <span class="badge bg-danger me-1 mb-2">Git</span>
+            <span class="badge bg-danger me-1 mb-2">GitHub</span>
+            <span class="badge bg-danger me-1 mb-2">Docker</span>
+            <span class="badge bg-danger me-1 mb-2">Swagger / OpenAPI</span>
+            <span class="badge bg-danger me-1 mb-2">Postman</span>
+            <span class="badge bg-danger me-1 mb-2">Linux (CLI)</span>
           </div>
         </div>
       </section>
+      <!--Seccion certificados-->
+      <section class="container py-5" id="certificados">
+        <h2 class="section-title">Certificaciones</h2>
+        <div class="section-divider"></div>
+        <p class="text-muted mb-4">
+          Certificados recientes en desarrollo, buenas prácticas, DevOps y
+          sistemas.
+        </p>
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4"
+        >
+          <small class="text-secondary"
+            >Vista rápida: 4 certificados destacados</small
+          ><a class="btn btn-sm btn-outline-light" href="certificados.html"
+            >Ver todos los certificados (7)</a
+          >
+        </div>
+        <div class="cert-grid">
+          <article
+            class="cert-card"
+            data-caption="Udemy · 10 de enero de 2026 · 6.5 horas"
+            data-open="img-modal"
+            data-src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg"
+            data-title="Principios SOLID y Clean Code"
+          >
+            <img
+              alt="Certificado: Principios SOLID y Clean Code"
+              class="cert-img"
+              loading="lazy"
+              src="img/certificados/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85.jpg"
+            />
+            <div class="cert-overlay">
+              <div class="cert-top">
+                <span class="badge bg-danger">Udemy</span>
+                <span class="badge bg-dark">2026</span>
+              </div>
+              <h5 class="cert-title">Principios SOLID y Clean Code</h5>
+              <p class="cert-meta">Fernando Herrera · DevTalles</p>
+              <div class="cert-actions">
+                <a
+                  class="btn btn-sm btn-outline-light cert-verify"
+                  data-skip-modal=""
+                  href="https://ude.my/UC-963e7ac9-b555-4ab6-9d90-32e59e12ca85"
+                  rel="noopener"
+                  target="_blank"
+                  >Validar</a
+                >
+                <span class="cert-hint">Click para ampliar</span>
+              </div>
+            </div>
+          </article>
+          <article
+            class="cert-card"
+            data-caption="Udemy · 8 de enero de 2026 · 46 horas"
+            data-open="img-modal"
+            data-src="img/certificados/UC-05905a2b-ede8-4501-8960-40204f89b53e.jpg"
+            data-title="React: De cero a experto"
+          >
+            <img
+              alt="Certificado: React: De cero a experto"
+              class="cert-img"
+              loading="lazy"
+              src="img/certificados/UC-05905a2b-ede8-4501-8960-40204f89b53e.jpg"
+            />
+            <div class="cert-overlay">
+              <div class="cert-top">
+                <span class="badge bg-danger">Udemy</span>
+                <span class="badge bg-dark">2026</span>
+              </div>
+              <h5 class="cert-title">React: De cero a experto</h5>
+              <p class="cert-meta">Fernando Herrera · DevTalles</p>
+              <div class="cert-actions">
+                <a
+                  class="btn btn-sm btn-outline-light cert-verify"
+                  data-skip-modal=""
+                  href="https://ude.my/UC-05905a2b-ede8-4501-8960-40204f89b53e"
+                  rel="noopener"
+                  target="_blank"
+                  >Validar</a
+                >
+                <span class="cert-hint">Click para ampliar</span>
+              </div>
+            </div>
+          </article>
 
+          <article
+            class="cert-card"
+            data-caption="Udemy · 13 de enero de 2026 · 14 horas"
+            data-open="img-modal"
+            data-src="img/certificados/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a.jpg"
+            data-title="Docker: Guía práctica para desarrolladores"
+          >
+            <img
+              alt="Certificado: Docker: Guía práctica para desarrolladores"
+              class="cert-img"
+              loading="lazy"
+              src="img/certificados/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a.jpg"
+            />
+            <div class="cert-overlay">
+              <div class="cert-top">
+                <span class="badge bg-danger">Udemy</span>
+                <span class="badge bg-dark">2026</span>
+              </div>
+              <h5 class="cert-title">
+                Docker: Guía práctica para desarrolladores
+              </h5>
+              <p class="cert-meta">Fernando Herrera · DevTalles</p>
+              <div class="cert-actions">
+                <a
+                  class="btn btn-sm btn-outline-light cert-verify"
+                  data-skip-modal=""
+                  href="https://ude.my/UC-f4311fe5-cd55-4c8c-a7f2-7add3f21a16a"
+                  rel="noopener"
+                  target="_blank"
+                  >Validar</a
+                >
+                <span class="cert-hint">Click para ampliar</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="cert-card"
+            data-caption="Cisco Networking Academy · 03 de diciembre de 2025"
+            data-open="img-modal"
+            data-src="img/certificados/Linux Essentials.png"
+            data-title="Linux Essentials"
+          >
+            <img
+              alt="Certificado: Linux Essentials"
+              class="cert-img"
+              loading="lazy"
+              src="img/certificados/Linux Essentials.png"
+            />
+            <div class="cert-overlay">
+              <div class="cert-top">
+                <span class="badge bg-danger">Cisco Networking Academy</span>
+                <span class="badge bg-dark">2025</span>
+              </div>
+              <h5 class="cert-title">Linux Essentials</h5>
+              <p class="cert-meta">Cisco Networking Academy · NDG</p>
+              <div class="cert-actions">
+                <span class="badge bg-dark cert-verify" data-skip-modal=""
+                  >Sin enlace</span
+                >
+                <span class="cert-hint">Click para ampliar</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
       <!--Seccion proyectos-->
-      <section id="proyectos" class="container py-5">
+      <section class="container py-5" id="proyectos">
         <h2 class="section-title">Proyectos</h2>
         <div class="section-divider"></div>
-
-        <div class="row g-4 align-items-stretch">
-          <!-- Texto / descripción -->
-          <div class="col-lg-6">
-            <div class="project-card p-3 p-md-4 h-100">
-              <!-- Título -->
-              <h5 class="fw-semibold mb-1">
-                Sistema de Gestión de Casos y Citas (Fibra Óptica)
-              </h5>
-
-              <!-- Stack / enfoque -->
-              <p class="project-meta mb-2">
-                ASP.NET Core · EF Core · SQL Server · Identity · Roles
-              </p>
-
-              <!-- Problema + solución -->
-              <p class="project-desc mb-3">
-                La empresa gestionaba las citas y casos de clientes mediante
-                Google Calendar, lo que provocaba falta de control, duplicidad
-                de agendas y dificultad para dar seguimiento a los trabajos
-                realizados. El sistema centraliza la gestión de casos y citas,
-                permitiendo asignarlos por planilla o cuadrilla y controlar el
-                acceso según el rol del usuario.
-              </p>
-
-              <!-- Funcionalidades clave -->
-              <ul class="project-list mb-3">
-                <li>Gestión centralizada de casos y citas de clientes.</li>
-                <li>
-                  Asignación de trabajos a técnicos o planillas específicas.
-                </li>
-                <li>Control de acceso por roles (Administrador / Técnico).</li>
-                <li>Historial de casos con evidencias y estados.</li>
-                <li>
-                  Reportes administrativos para medir la efectividad de las
-                  planillas.
-                </li>
-              </ul>
-
-              <!-- Impacto -->
-              <p class="project-impact mb-0">
-                Resultado: mayor control operativo, reducción de errores en la
-                agenda y mejor toma de decisiones mediante reportes
-                administrativos.
-              </p>
-            </div>
-          </div>
-
-          <!-- Carrusel -->
-          <div class="col-lg-6">
-            <div class="project-card p-2 p-md-3 h-100">
-              <div
-                id="casosFibraCarousel"
-                class="carousel slide"
-                data-bs-ride="carousel"
-                data-bs-interval="3500"
-                data-bs-pause="hover"
-              >
-                <!-- Indicadores -->
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#casosFibraCarousel"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Login"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#casosFibraCarousel"
-                    data-bs-slide-to="1"
-                    aria-label="Dashboard"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#casosFibraCarousel"
-                    data-bs-slide-to="2"
-                    aria-label="Crear caso"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#casosFibraCarousel"
-                    data-bs-slide-to="3"
-                    aria-label="Reportes"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#casosFibraCarousel"
-                    data-bs-slide-to="4"
-                    aria-label="Vista técnico"
-                  ></button>
-                </div>
-
-                <!-- Slides -->
-                <div class="carousel-inner rounded-4 overflow-hidden">
-                  <div class="carousel-item active">
-                    <img
-                      src="img/Proyecto/casos-1-login.png"
-                      class="d-block w-100 project-img"
-                      alt="Acceso seguro por roles"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div class="carousel-item">
-                    <img
-                      src="img/Proyecto/casos-2-dashboard.png"
-                      class="d-block w-100 project-img"
-                      alt="Control general de casos"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div class="carousel-item">
-                    <img
-                      src="img/Proyecto/casos-3-crear.png"
-                      class="d-block w-100 project-img"
-                      alt="Registro estructurado de casos"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div class="carousel-item">
-                    <img
-                      src="img/Proyecto/casos-4-reportes.png"
-                      class="d-block w-100 project-img"
-                      alt="Reportes para toma de decisiones"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div class="carousel-item">
-                    <img
-                      src="img/Proyecto/casos-5-tecnico.png"
-                      class="d-block w-100 project-img"
-                      alt="Casos asignados al técnico"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-
-                <!-- Controles -->
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#casosFibraCarousel"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#casosFibraCarousel"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Siguiente</span>
-                </button>
-              </div>
-
-              <!-- Tools extra (Play/Pause + progress) -->
-              <div
-                class="carousel-tools d-flex align-items-center justify-content-between gap-2 px-2 py-2 mt-2"
-              >
-                <button
-                  id="carouselToggle"
-                  class="btn btn-sm btn-outline-light"
-                >
-                  Pausar
-                </button>
-                <div class="carousel-progress flex-grow-1">
+        <div
+          class="project-block js-project"
+          data-descriptions="Acceso seguro al sistema con control por roles (Administrador / Técnico).||Panel administrativo con control general de casos y estados.||Registro estructurado de casos y citas de clientes.||Reportes administrativos para medir la efectividad de las planillas.||Vista del técnico con solo los casos asignados a su cuadrilla."
+        >
+          <div class="row g-4 align-items-stretch">
+            <!-- Texto / descripción -->
+            <div class="col-lg-6">
+              <div class="project-card p-3 p-md-4 h-100">
+                <h5 class="fw-semibold mb-1">
+                  Sistema de Gestión de Casos y Citas (Fibra Óptica)
+                </h5>
+                <p class="project-meta mb-2">
+                  ASP.NET Core · EF Core · SQL Server · Identity · Roles
+                </p>
+                <p class="text-muted mb-3">
+                  <strong>Problemática:</strong> La empresa gestionaba citas y
+                  casos de clientes mediante Google Calendar, lo que provocaba
+                  falta de control, duplicidad de agendas y dificultad para dar
+                  seguimiento.
+                </p>
+                <p class="text-muted mb-3">
+                  <strong>Solución:</strong> El sistema centraliza la gestión de
+                  casos y citas, permite asignarlos por planilla/cuadrilla y
+                  controla el acceso según el rol del usuario.
+                </p>
+                <div class="project-live mb-3">
                   <div
-                    id="carouselProgressBar"
-                    class="carousel-progress-bar"
-                  ></div>
+                    class="d-flex align-items-center justify-content-between gap-2"
+                  >
+                    <span class="badge bg-danger">Vista actual</span>
+                    <small class="text-muted"
+                      >Tip: click en una imagen para ampliarla</small
+                    >
+                  </div>
+                  <p class="project-slide-desc mt-2 mb-0 js-slide-desc"></p>
+                </div>
+                <ul class="project-list mb-3">
+                  <li>Gestión centralizada de casos y citas de clientes.</li>
+                  <li>
+                    Asignación de trabajos a técnicos o planillas específicas.
+                  </li>
+                  <li>
+                    Control de acceso por roles (Administrador / Técnico).
+                  </li>
+                  <li>Historial de casos con evidencias y estados.</li>
+                  <li>
+                    Reportes administrativos para medir la efectividad de las
+                    planillas.
+                  </li>
+                </ul>
+                <p class="project-impact mb-0">
+                  Resultado: mayor control operativo, reducción de errores en la
+                  agenda y mejor toma de decisiones mediante reportes
+                  administrativos.
+                </p>
+              </div>
+            </div>
+            <!-- Carrusel -->
+            <div class="col-lg-6">
+              <div class="project-card p-2 p-md-3 h-100">
+                <div
+                  class="carousel slide js-project-carousel"
+                  data-bs-interval="3500"
+                  data-bs-pause="hover"
+                  data-bs-ride="carousel"
+                  data-project-title="Sistema de Gestión de Casos y Citas (Fibra Óptica)"
+                  id="casosFibraCarousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      aria-current="true"
+                      aria-label="Acceso seguro por roles"
+                      class="active"
+                      data-bs-slide-to="0"
+                      data-bs-target="#casosFibraCarousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Control general de casos"
+                      data-bs-slide-to="1"
+                      data-bs-target="#casosFibraCarousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Registro estructurado de casos"
+                      data-bs-slide-to="2"
+                      data-bs-target="#casosFibraCarousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Reportes para toma de decisiones"
+                      data-bs-slide-to="3"
+                      data-bs-target="#casosFibraCarousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Casos asignados al técnico"
+                      data-bs-slide-to="4"
+                      data-bs-target="#casosFibraCarousel"
+                      type="button"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner rounded-4 overflow-hidden">
+                    <div class="carousel-item active">
+                      <img
+                        alt="Acceso seguro por roles"
+                        class="d-block w-100 project-img"
+                        data-caption="Acceso seguro por roles"
+                        data-open="img-modal"
+                        data-title="Sistema de Gestión de Casos y Citas (Fibra Óptica)"
+                        loading="lazy"
+                        src="img/Proyecto/casos-1-login.png"
+                      />
+                      <span class="project-caption"
+                        >Acceso seguro por roles</span
+                      >
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Control general de casos"
+                        class="d-block w-100 project-img"
+                        data-caption="Control general de casos"
+                        data-open="img-modal"
+                        data-title="Sistema de Gestión de Casos y Citas (Fibra Óptica)"
+                        loading="lazy"
+                        src="img/Proyecto/casos-2-dashboard.png"
+                      />
+                      <span class="project-caption"
+                        >Control general de casos</span
+                      >
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Registro estructurado de casos"
+                        class="d-block w-100 project-img"
+                        data-caption="Registro estructurado de casos"
+                        data-open="img-modal"
+                        data-title="Sistema de Gestión de Casos y Citas (Fibra Óptica)"
+                        loading="lazy"
+                        src="img/Proyecto/casos-3-crear.png"
+                      />
+                      <span class="project-caption"
+                        >Registro estructurado de casos</span
+                      >
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Reportes para toma de decisiones"
+                        class="d-block w-100 project-img"
+                        data-caption="Reportes para toma de decisiones"
+                        data-open="img-modal"
+                        data-title="Sistema de Gestión de Casos y Citas (Fibra Óptica)"
+                        loading="lazy"
+                        src="img/Proyecto/casos-4-reportes.png"
+                      />
+                      <span class="project-caption"
+                        >Reportes para toma de decisiones</span
+                      >
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Casos asignados al técnico"
+                        class="d-block w-100 project-img"
+                        data-caption="Casos asignados al técnico"
+                        data-open="img-modal"
+                        data-title="Sistema de Gestión de Casos y Citas (Fibra Óptica)"
+                        loading="lazy"
+                        src="img/Proyecto/casos-5-tecnico.png"
+                      />
+                      <span class="project-caption"
+                        >Casos asignados al técnico</span
+                      >
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    data-bs-slide="prev"
+                    data-bs-target="#casosFibraCarousel"
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="carousel-control-prev-icon"
+                    ></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    data-bs-slide="next"
+                    data-bs-target="#casosFibraCarousel"
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="carousel-control-next-icon"
+                    ></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
+                </div>
+                <div
+                  class="carousel-tools d-flex align-items-center justify-content-between gap-2 px-2 py-2 mt-2"
+                >
+                  <button
+                    class="btn btn-sm btn-outline-light js-carousel-toggle"
+                    type="button"
+                  >
+                    Pausar
+                  </button>
+                  <div class="carousel-progress flex-grow-1">
+                    <div class="carousel-progress-bar js-carousel-bar"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!--Seccion contacto-->
-      <section id="contacto" class="container py-5">
-        <h2 class="section-title">Contacto</h2>
-        <div class="section-divider"></div>
-
-        <p>Email: deilerdavidcarrillo@hotmail.com</p>
+        <hr class="my-5 opacity-25" />
+        <div
+          class="project-block js-project"
+          data-descriptions="Inicio (presentación y navegación).||Sobre Diser (quiénes somos y valores).||Servicios, planes y precios.||Cobertura y zonas de servicio.||Galería (imágenes y evidencias).||FAQ (preguntas frecuentes).||Soporte al cliente (canales y ayuda).||Contacto (formularios y datos).||Avisos o comunicados importantes.||Consejos y recomendaciones para usuarios."
+        >
+          <div class="row g-4 align-items-stretch">
+            <!-- Texto / descripción (derecha en escritorio) -->
+            <div class="col-lg-6 order-lg-2">
+              <div class="project-card p-3 p-md-4 h-100">
+                <h5 class="fw-semibold mb-1">
+                  Diser | Sitio Web Corporativo (Internet)
+                </h5>
+                <p class="project-meta mb-2">HTML · CSS</p>
+                <p class="text-muted mb-3">
+                  <strong>Problemática:</strong> La empresa
+                  <strong>Diser</strong> necesitaba una página corporativa para
+                  explicar sus servicios de internet, mostrar
+                  <strong>planes y precios</strong>, y ofrecer canales claros de
+                  <strong>soporte</strong> y contacto.
+                </p>
+                <p class="text-muted mb-3">
+                  <strong>Solución:</strong> Sitio multipágina hecho con
+                  <strong>HTML + CSS</strong>, con secciones de inicio, sobre la
+                  empresa, servicios, <strong>planes/precios</strong>,
+                  cobertura, galería, FAQ, soporte y contacto.
+                </p>
+                <div class="project-live mb-3">
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-2"
+                  >
+                    <span class="badge bg-danger">Vista actual</span>
+                    <small class="text-muted"
+                      >Tip: click en una imagen para ampliarla</small
+                    >
+                  </div>
+                  <p class="project-slide-desc mt-2 mb-0 js-slide-desc"></p>
+                </div>
+                <ul class="project-list mb-3">
+                  <li>Diseño limpio y responsive (desktop / mobile).</li>
+                  <li>
+                    Sección de <strong>planes y precios</strong> para los
+                    servicios.
+                  </li>
+                  <li>
+                    Formularios y opciones para
+                    <strong>contactar soporte</strong>.
+                  </li>
+                  <li>Galería, avisos y consejos para clientes.</li>
+                  <li>FAQ para resolver dudas frecuentes.</li>
+                </ul>
+                <p class="project-impact mb-0">
+                  Resultado: una presencia online más profesional para
+                  <strong>Diser</strong> y un flujo más claro para que el
+                  cliente vea planes, cobertura y pueda solicitar soporte.
+                </p>
+              </div>
+            </div>
+            <!-- Carrusel (izquierda en escritorio) -->
+            <div class="col-lg-6 order-lg-1">
+              <div class="project-card p-2 p-md-3 h-100">
+                <div
+                  class="carousel slide js-project-carousel"
+                  data-bs-interval="3200"
+                  data-bs-pause="hover"
+                  data-bs-ride="carousel"
+                  data-project-title="Diser | Sitio Web Corporativo (Internet)"
+                  id="proyecto2Carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      aria-current="true"
+                      aria-label="Inicio"
+                      class="active"
+                      data-bs-slide-to="0"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Sobre Diser"
+                      data-bs-slide-to="1"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Servicios y planes"
+                      data-bs-slide-to="2"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Cobertura"
+                      data-bs-slide-to="3"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Galería"
+                      data-bs-slide-to="4"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="FAQ"
+                      data-bs-slide-to="5"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Soporte"
+                      data-bs-slide-to="6"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Contacto"
+                      data-bs-slide-to="7"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Avisos"
+                      data-bs-slide-to="8"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                    <button
+                      aria-label="Consejos"
+                      data-bs-slide-to="9"
+                      data-bs-target="#proyecto2Carousel"
+                      type="button"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner rounded-4 overflow-hidden">
+                    <div class="carousel-item active">
+                      <img
+                        alt="Inicio"
+                        class="d-block w-100 project-img"
+                        data-caption="Inicio"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/home.png"
+                      />
+                      <span class="project-caption">Inicio</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Sobre Diser"
+                        class="d-block w-100 project-img"
+                        data-caption="Sobre Diser"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/about_us.png"
+                      />
+                      <span class="project-caption">Sobre Diser</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Servicios y planes"
+                        class="d-block w-100 project-img"
+                        data-caption="Servicios y planes"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/services.png"
+                      />
+                      <span class="project-caption">Servicios y planes</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Cobertura"
+                        class="d-block w-100 project-img"
+                        data-caption="Cobertura"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/cobertura.png"
+                      />
+                      <span class="project-caption">Cobertura</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Galería"
+                        class="d-block w-100 project-img"
+                        data-caption="Galería"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/galeria.png"
+                      />
+                      <span class="project-caption">Galería</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="FAQ"
+                        class="d-block w-100 project-img"
+                        data-caption="FAQ"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/faq.png"
+                      />
+                      <span class="project-caption">FAQ</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Soporte"
+                        class="d-block w-100 project-img"
+                        data-caption="Soporte"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/soporte.png"
+                      />
+                      <span class="project-caption">Soporte</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Contacto"
+                        class="d-block w-100 project-img"
+                        data-caption="Contacto"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/contacto.png"
+                      />
+                      <span class="project-caption">Contacto</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Avisos"
+                        class="d-block w-100 project-img"
+                        data-caption="Avisos"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/avisos.png"
+                      />
+                      <span class="project-caption">Avisos</span>
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        alt="Consejos"
+                        class="d-block w-100 project-img"
+                        data-caption="Consejos"
+                        data-open="img-modal"
+                        data-title="Diser | Sitio Web Corporativo (Internet)"
+                        loading="lazy"
+                        src="img/Proyecto2/consejos.png"
+                      />
+                      <span class="project-caption">Consejos</span>
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    data-bs-slide="prev"
+                    data-bs-target="#proyecto2Carousel"
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="carousel-control-prev-icon"
+                    ></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    data-bs-slide="next"
+                    data-bs-target="#proyecto2Carousel"
+                    type="button"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="carousel-control-next-icon"
+                    ></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
+                </div>
+                <div
+                  class="carousel-tools d-flex align-items-center justify-content-between gap-2 px-2 py-2 mt-2"
+                >
+                  <button
+                    class="btn btn-sm btn-outline-light js-carousel-toggle"
+                    type="button"
+                  >
+                    Pausar
+                  </button>
+                  <div class="carousel-progress flex-grow-1">
+                    <div class="carousel-progress-bar js-carousel-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <!-- Modal para ver imagen del carrusel -->
-    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+    <div aria-hidden="true" class="modal fade" id="imgModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content modal-dark">
           <div class="modal-header modal-dark-header">
@@ -462,30 +919,27 @@
               </h6>
               <small class="text-secondary" id="imgModalCaption"></small>
             </div>
-
             <button
-              type="button"
+              aria-label="Cerrar"
               class="btn-close btn-close-white"
               data-bs-dismiss="modal"
-              aria-label="Cerrar"
+              type="button"
             ></button>
           </div>
-
           <div class="modal-body p-0">
             <img
+              alt=""
               id="imgModalSrc"
               src=""
-              alt=""
               style="width: 100%; height: auto; display: block"
             />
           </div>
         </div>
       </div>
     </div>
-
     <!--FOOTER-->
     <footer class="text-center py-3">
-      <small>©2025 Deiler. Todos los derechos reservados.</small>
+      <small>©2026 Deiler. Todos los derechos reservados.</small>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/navbar-sharingan.js"></script>
