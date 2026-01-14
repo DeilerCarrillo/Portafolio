@@ -22,7 +22,7 @@
         {
             name: "ASP.NET Core",
             chips: [
-              { kind: "udemy", label: "Master API RESTful (.NET 9)", to: { tag: "backend", q: "ASP.NET Core Web API .NET 9" } },
+              { kind: "udemy", badge: "Udemy", label: "Master API RESTful (.NET 9)", to: { tag: "backend", q: "ASP.NET Core Web API .NET 9" } },
               { kind: "practice", badge: "Proyecto", label: "Sistema de Casos y Citas (Roles)" },
               {
                 kind: "evidence",
@@ -33,13 +33,10 @@
                   caption: "Evidencia práctica: roles, asignación, historial y reportes.",
                   gallery: [
                     "img/Proyecto/casos-1-login.png",
-                    "img/Proyecto/casos-2-reporte.png",
-                    "img/Proyecto/casos-3-crear-usuario.png",
-                    "img/Proyecto/casos-4-crear-rol.png",
-                    "img/Proyecto/casos-5-lista-roles.png",
-                    "img/Proyecto/casos-6-nuevo-caso.png",
-                    "img/Proyecto/casos-7-lista-casos.png",
-                    "img/Proyecto/casos-8-reportes.png"
+                    "img/Proyecto/casos-2-dashboard.png",
+                    "img/Proyecto/casos-3-crear.png",
+                    "img/Proyecto/casos-4-reportes.png",
+                    "img/Proyecto/casos-5-tecnico.png"
                   ],
                   alt: "Capturas del sistema de casos y citas",
                 },

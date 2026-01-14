@@ -48,9 +48,9 @@
 
   function cardMatches(card) {
     const provider = normalize(card.dataset.provider);
-    const tags = normalize(card.dataset.tags)
+    const tags = (card.dataset.tags || "")
       .split(",")
-      .map((t) => t.trim())
+      .map((t) => normalize(t))
       .filter(Boolean);
 
     const title = normalize(card.dataset.title);
